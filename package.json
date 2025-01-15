@@ -17,7 +17,9 @@
     "react-dom": "^18.3.1",
     "react-infinite-logo-slider": "^1.1.4",
     "react-slick": "^0.30.3",
+    "react-spring-carousel": "^2.0.19",
     "slick-carousel": "^1.8.1",
+    "styled-components": "^6.1.14",
     "swiper": "^11.2.1"
   },
   "devDependencies": {

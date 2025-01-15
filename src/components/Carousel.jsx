@@ -1,42 +1,44 @@
-import Slider from 'react-infinite-logo-slider';
+import { useState, useEffect } from "react";
+import { motion } from "framer-motion";
+
+const logos = [
+  "/logo/1.png",
+  "/logo/2.png",
+  "/logo/3.png",
+  "/logo/4.png",
+  "/logo/5.png",
+  "/logo/6.png",
+];
 
 const Carousel = () => {
-    return (
-        <div className="overflow-hidden mt-20"> {/* Added margin-top to avoid navbar overlap */}
-            <Slider
-                width="250px"
-                duration={10}
-                pauseOnHover={true}
-                blurBorders={false}
-                blurBorderColor={'#fff'}
-            >
-                <Slider.Slide>
-                    <img src="/logo/1.png" alt="any" className='w-36' />
-                </Slider.Slide>
-                <Slider.Slide>
-                    <img src="/logo/2.png" alt="any" className='w-36' />
-                </Slider.Slide>
-                <Slider.Slide>
-                    <img src="/logo/3.png" alt="any" className='w-36' />
-                </Slider.Slide>
-                <Slider.Slide>
-                    <img src="/logo/4.png" alt="any" className='w-36' />
-                </Slider.Slide>
-                <Slider.Slide>
-                    <img src="/logo/5.png" alt="any" className='w-36' />
-                </Slider.Slide>
-                <Slider.Slide>
-                    <img src="/logo/6.png" alt="any" className='w-36' />
-                </Slider.Slide>
-                <Slider.Slide>
-                    <img src="/logo/7.png" alt="any" className='w-36' />
-                </Slider.Slide>
-                <Slider.Slide>
-                    <img src="/logo/8.png" alt="any" className='w-36' />
-                </Slider.Slide>
-            </Slider>
-        </div>
-    );
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  useEffect(() => {
+    const autoplayInterval = window.setInterval(() => {
+      setCurrentIndex((prevIndex) => (prevIndex + 1) % (logos.length - 2));
+    }, 1000); // Ganti setiap 2 detik
+
+    return () => {
+      window.clearInterval(autoplayInterval);
+    };
+  }, []);
+
+  const displayedLogos = logos.slice(currentIndex, currentIndex + 3);
+
+  return (
+    <div className="relative w-full overflow-hidden z-[-1]">
+      <div className="flex justify-center items-center space-x-9">
+        {displayedLogos.map((logo, index) => (
+          <motion.img
+            key={index}
+            src={logo}
+            alt={`Logo ${currentIndex + index + 1}`}
+            className="h-12 w-auto object-contain md:h-16"
+          />
+        ))}
+      </div>
+    </div>
+  );
 };
 
 export default Carousel;
