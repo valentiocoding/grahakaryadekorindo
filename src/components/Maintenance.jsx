@@ -1,6 +1,10 @@
 import { motion } from "framer-motion";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faLinkedin, faWhatsapp } from "@fortawesome/free-brands-svg-icons";
+import {
+  faLinkedin,
+  faTiktok,
+  faWhatsapp,
+} from "@fortawesome/free-brands-svg-icons";
 import { faInstagram } from "@fortawesome/free-brands-svg-icons";
 
 const Maintenance = () => {
@@ -37,12 +41,12 @@ const Maintenance = () => {
           transition={{ duration: 0.8 }}
           className="text-white text-sm w-full px-3 mt-3"
         >
-          We will be live in
+          Currently available on Mobile only. We will be live for all devices in
         </motion.p>
 
         <div className="flex flex-wrap gap-5 justify-center items-center mt-5">
           {/* Countdown Box */}
-          {["17 DAYS", "16 HOURS", "12 MINUTES", "23 SECONDS"].map(
+          {["7 DAYS", "16 HOURS", "12 MINUTES", "23 SECONDS"].map(
             (item, index) => (
               <motion.div
                 initial={{ opacity: 0 }}
@@ -95,6 +99,18 @@ const Maintenance = () => {
             className="text-white text-5xl"
           >
             <FontAwesomeIcon icon={faLinkedin} />
+          </motion.a>
+          <motion.a
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.5 }}
+            whileHover={{ scale: 2 }}
+            href="https://www.tiktok.com/@gkdekorindo/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-white text-5xl"
+          >
+            <FontAwesomeIcon icon={faTiktok} />
           </motion.a>
         </div>
         <p className="font-sifonn text-white">CONTACT US</p>

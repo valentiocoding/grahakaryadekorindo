@@ -50,14 +50,16 @@ const About = () => {
         <span className="font-semibold">100,000 sqm</span> of projects. We
         decided to embark on a larger purpose in 2010.
       </motion.p>
-      <motion.img
-        initial={{ opacity: 0, y: 50 }}
-        transition={{ duration: 1 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        src="/home.png"
-        alt=""
-        className="h-48 w-full rounded-xl"
-      />
+      <div className="h-48 overflow-hidden flex justify-center items-center rounded-xl">
+        <motion.img
+          initial={{ opacity: 0, y: 50 }}
+          transition={{ duration: 1 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          src="img/about.jpeg"
+          alt=""
+          className="h-auto w-full rounded-xl"
+        />
+      </div>
       <motion.h1
         initial={{ opacity: 0, y: 50 }}
         transition={{ duration: 1 }}
@@ -77,18 +79,38 @@ const About = () => {
         continues to grow strong, serving numerous valuable clients from various
         industries.
       </motion.p>
-      <motion.h1 className="font-bold font-raleway text-center my-3">
+      <motion.h1
+        initial={{ opacity: 0, y: 50 }}
+        transition={{ duration: 1 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        className="font-bold font-raleway text-center my-3"
+      >
         Vision
       </motion.h1>
-      <motion.h1 className="font-raleway text-justify text-sm mb-3">
+      <motion.h1
+        initial={{ opacity: 0, y: 50 }}
+        transition={{ duration: 1 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        className="font-raleway text-justify text-sm mb-3"
+      >
         Positioned as a leading company specializing in personalized interior
         and exterior construction transforming clients functional and
         inspirational dreams into reality with joy and dedication.
       </motion.h1>
-      <motion.h1 className="my-3 font-bold font-raleway text-center">
+      <motion.h1
+        initial={{ opacity: 0, y: 50 }}
+        transition={{ duration: 1 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        className="my-3 font-bold font-raleway text-center"
+      >
         Mission
       </motion.h1>
-      <motion.ul className="space-y-3 font-raleway text-justify text-sm">
+      <motion.ul
+        initial={{ opacity: 0, y: 50 }}
+        transition={{ duration: 1 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        className="space-y-3 font-raleway text-justify text-sm"
+      >
         <li className="flex items-center gap-2">
           <span>•</span>
           <p>

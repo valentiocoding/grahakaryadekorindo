@@ -5,9 +5,9 @@ const Home = () => {
   return (
     <>
       {/* Background Image */}
-      <div className="bg-[url('/home.png')] h-screen bg-cover bg-center z-51">
+      <div className="bg-[url('/img/home.png')] h-screen bg-cover bg-center relative">
         {/* Overlay BG */}
-        <div className="bg-black/50 h-full flex items-center justify-center">
+        <div className="bg-black/50 h-full flex items-center justify-center absolute inset-0">
           {/* Text Content */}
           <motion.div
             initial={{ opacity: 0 }}
