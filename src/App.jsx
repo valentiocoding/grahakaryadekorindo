@@ -13,7 +13,7 @@ import FixedFooter from "./components/FixedFooter";
 function App() {
   return (
     <>
-      <div className="sm:hidden">
+      <div className="">
         <Navbar />
         <Home />
         <About />
@@ -24,9 +24,6 @@ function App() {
         <Project />
         <FixedFooter img="img/footer2.png" />
         <Footer />
-      </div>
-      <div className="hidden sm:block">
-        <Maintenance />
       </div>
     </>
   );

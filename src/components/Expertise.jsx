@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 const Expertise = () => {
   return (
-    <div className=" mt-10 flex flex-col justify-center items-center mx-5">
+    <div className="mt-5 flex flex-col justify-center items-center mx-5">
       <motion.h1
         initial={{ opacity: 0, y: 50 }}
         transition={{ duration: 1 }}
@@ -18,19 +18,22 @@ const Expertise = () => {
         whileInView={{ opacity: 1, y: 0 }}
         className="flex flex-col mb-5"
       >
+        <div>
+          
+        </div>
         <div className="design flex items-center justify-center flex-col">
-          <div className="h-64 w-full bg-red-300 overflow-hidden rounded-xl">
+          <div className="h-64 items-center flex w-full bg-red-300 overflow-hidden rounded-xl">
             <img
               src="img/design.jpg"
               alt="Building & Interior Construction"
-              className="w-full -mt-52"
+              className="w-full h-full object-cover"
             />
           </div>
           <motion.h2
             initial={{ opacity: 0, y: 50 }}
             transition={{ duration: 1 }}
             whileInView={{ opacity: 1, y: 0 }}
-            className="mt-4  font-bold font-raleway"
+            className="mt-4 font-bold font-raleway"
           >
             Design & Plan
           </motion.h2>
@@ -49,7 +52,7 @@ const Expertise = () => {
             >
               12 years of experience
             </motion.span>
-            , we are okeased to offer the best advice and insights to enhance
+            , we are pleased to offer the best advice and insights to enhance
             your ideas and concepts.
           </motion.p>
         </div>
@@ -61,18 +64,18 @@ const Expertise = () => {
           whileInView={{ opacity: 1, y: 0 }}
           className="design flex items-center justify-center flex-col"
         >
-          <div className="h-64 w-full bg-red-300 overflow-hidden rounded-xl">
+          <div className="h-64 flex items-center w-full bg-red-300 overflow-hidden rounded-xl">
             <img
               src="img/building.png"
               alt="Building & Interior Construction"
-              className="w-full -mt-16"
+              className="w-full h-full object-cover"
             />
           </div>
           <motion.h2
             initial={{ opacity: 0, y: 50 }}
             transition={{ duration: 1 }}
             whileInView={{ opacity: 1, y: 0 }}
-            className="mt-4  font-bold font-raleway"
+            className="mt-4 font-bold font-raleway"
           >
             Building & Interior Construction
           </motion.h2>
@@ -100,15 +103,15 @@ const Expertise = () => {
           <div className="h-64 w-full bg-red-300 overflow-hidden rounded-xl">
             <img
               src="img/mep.png"
-              alt="Building & Interior Construction"
-              className="w-auto -mt-20"
+              alt="MEP Installation"
+              className="w-full h-full object-cover"
             />
           </div>
           <motion.h2
             initial={{ opacity: 0, y: 50 }}
             transition={{ duration: 1 }}
             whileInView={{ opacity: 1, y: 0 }}
-            className="mt-4  font-bold font-raleway"
+            className="mt-4 font-bold font-raleway"
           >
             MEP Installation
           </motion.h2>
@@ -132,16 +135,16 @@ const Expertise = () => {
         >
           <div className="h-64 w-full bg-red-300 overflow-hidden rounded-xl">
             <img
-              src="img/furniture.png"
-              alt="Building & Interior Construction"
-              className="w-full -mt-44"
+              src="img/custom.png"
+              alt="Furniture Making"
+              className="w-full h-full object-cover"
             />
           </div>
           <motion.h2
             initial={{ opacity: 0, y: 50 }}
             transition={{ duration: 1 }}
             whileInView={{ opacity: 1, y: 0 }}
-            className="mt-4  font-bold font-raleway"
+            className="mt-4 font-bold font-raleway"
           >
             Furniture Making
           </motion.h2>

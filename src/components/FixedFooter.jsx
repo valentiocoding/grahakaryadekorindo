@@ -5,10 +5,10 @@ const FixedBG = ({ img }) => {
     <div className="relative w-full">
       {/* Background Fixed */}
       <div
-        className="absolute inset-0 bg-cover bg-center bg-fixed"
+        className="absolute inset-0 bg-cover bg-center"
         style={{
           backgroundImage: `url(${img})`,
-          backgroundPosition: "bottom",
+          backgroundPosition: "center",
           backgroundSize: "100%",
         }}
       ></div>
