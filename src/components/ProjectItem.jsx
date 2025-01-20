@@ -1,5 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
 
 const ProjectItem = ({ image, title, description }) => {
   return (
@@ -12,14 +14,22 @@ const ProjectItem = ({ image, title, description }) => {
       >
         <img src={image} alt={title} className="w-full h-full object-cover" />
       </motion.div>
-      <motion.h2
+      <motion.div
         initial={{ opacity: 0, y: 50 }}
         transition={{ duration: 1 }}
         whileInView={{ opacity: 1, y: 0 }}
-        className="mt-4 font-bold font-raleway"
+        className="flex gap-5 items-center justify-center mt-4"
       >
-        {title}
-      </motion.h2>
+        <h2
+          className=" font-bold font-raleway"
+        >
+          {title}
+        </h2>
+        <FontAwesomeIcon
+          icon={faArrowUpRightFromSquare}
+          className="text-[#184E25]"
+        />
+      </motion.div>
       <motion.p
         initial={{ opacity: 0, y: 50 }}
         transition={{ duration: 1 }}

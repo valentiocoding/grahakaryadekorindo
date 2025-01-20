@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import React from "react";
 import ProjectItem from "./ProjectItem";
 
+
 const Project = () => {
   const projects = [
     {
@@ -40,17 +41,15 @@ const Project = () => {
         initial={{ opacity: 0, y: 50 }}
         transition={{ duration: 1 }}
         whileInView={{ opacity: 1, y: 0 }}
-        className="font-raleway font-bold text-xl mb-5"
+        className="font-raleway font-bold text-xl mb-10"
       >
         Our Project
       </motion.h1>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 w-full max-w-6xl">
         {projects.map((project, index) => (
-          <motion.div
-          whileHover={{ scale: 1.1 }}
-          key={index}>
+          <motion.div whileHover={{ scale: 1.1 }} key={index}>
             <a href={project.link}>
-              <ProjectItem {...project} />
+              <ProjectItem {...project} /> 
             </a>
           </motion.div>
         ))}

@@ -13,7 +13,7 @@ const Expertise = () => {
         Our Expertise
       </motion.h1>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 w-full max-w-6xl">
-        {[ // Array of expertise items
+        {[
           {
             title: "Design & Plan",
             imgSrc: "img/design.jpg",
@@ -44,13 +44,13 @@ const Expertise = () => {
             initial={{ opacity: 0, y: 50 }}
             transition={{ duration: 1 }}
             whileInView={{ opacity: 1, y: 0 }}
-            className="flex flex-col items-center justify-center"
+            className="flex flex-col items-stretch justify-between" // Menggunakan 'justify-between' untuk mendistribusikan ruang antar elemen
           >
             <div className="h-64 w-full bg-red-300 overflow-hidden rounded-xl">
               <img
                 src={expertise.imgSrc}
                 alt={expertise.title}
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover" // Memastikan gambar menutupi seluruh kontainer
               />
             </div>
             <motion.h2
@@ -65,7 +65,7 @@ const Expertise = () => {
               initial={{ opacity: 0, y: 50 }}
               transition={{ duration: 1 }}
               whileInView={{ opacity: 1, y: 0 }}
-              className="mt-2 text-center font-raleway text-sm"
+              className="mt-2 text-center font-raleway text-sm flex-grow"
             >
               {expertise.description}
             </motion.p>

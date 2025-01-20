@@ -7,7 +7,6 @@ const About = () => {
     <>
       <div className="sm:mx-10 md:hidden">
         <div className="flex flex-col justify-center items-center mx-5">
-
           <motion.h3
             initial={{ opacity: 0, y: 50 }}
             transition={{ duration: 1 }}
@@ -66,73 +65,71 @@ const About = () => {
             various industries.
           </motion.p>
           <div className="bg-[#184E25] px-5 py-2 rounded-xl text-white">
-
-          <motion.h1
-            initial={{ opacity: 0, y: 50 }}
-            transition={{ duration: 1 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            className="font-bold font-raleway text-center my-3"
-          >
-            Vision
-          </motion.h1>
-          <motion.h1
-            initial={{ opacity: 0, y: 50 }}
-            transition={{ duration: 1 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            className="font-raleway text-justify text-sm mb-3"
-          >
-            Positioned as a leading company specializing in personalized
-            interior and exterior construction transforming clients functional
-            and inspirational dreams into reality with joy and dedication.
-          </motion.h1>
+            <motion.h1
+              initial={{ opacity: 0, y: 50 }}
+              transition={{ duration: 1 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              className="font-bold font-raleway text-center my-3"
+            >
+              Vision
+            </motion.h1>
+            <motion.h1
+              initial={{ opacity: 0, y: 50 }}
+              transition={{ duration: 1 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              className="font-raleway text-justify text-sm mb-3"
+            >
+              Positioned as a leading company specializing in personalized
+              interior and exterior construction transforming clients functional
+              and inspirational dreams into reality with joy and dedication.
+            </motion.h1>
           </div>
           <div className="bg-[#184E25] px-5 py-2 rounded-xl text-white mt-5">
-
-          <motion.h1
-            initial={{ opacity: 0, y: 50 }}
-            transition={{ duration: 1 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            className="my-3 font-bold font-raleway text-center"
-          >
-            Mission
-          </motion.h1>
-          <motion.ul
-            initial={{ opacity: 0, y: 50 }}
-            transition={{ duration: 1 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            className="space-y-3 font-raleway text-justify text-sm"
-          >
-            <li className="flex items-center gap-2">
-              <span>•</span>
-              <p>
-                Provide personalized interior and exterior construction
-                solutions that bring client's functional and inspirational
-                visions to life.
-              </p>
-            </li>
-            <li className="flex items-center gap-2">
-              <span>•</span>
-              <p>
-                Deliver exceptional craftsmanship and innovative design with a
-                focus on quality and precision.
-              </p>
-            </li>
-            <li className="flex items-center gap-2">
-              <span>•</span>
-              <p>
-                Ensure a joyful and dedicated experience for clients through
-                every phase of the project.
-              </p>
-            </li>
-          </motion.ul>
+            <motion.h1
+              initial={{ opacity: 0, y: 50 }}
+              transition={{ duration: 1 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              className="my-3 font-bold font-raleway text-center"
+            >
+              Mission
+            </motion.h1>
+            <motion.ul
+              initial={{ opacity: 0, y: 50 }}
+              transition={{ duration: 1 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              className="space-y-3 font-raleway text-justify text-sm"
+            >
+              <li className="flex items-center gap-2">
+                <span>•</span>
+                <p>
+                  Provide personalized interior and exterior construction
+                  solutions that bring client's functional and inspirational
+                  visions to life.
+                </p>
+              </li>
+              <li className="flex items-center gap-2">
+                <span>•</span>
+                <p>
+                  Deliver exceptional craftsmanship and innovative design with a
+                  focus on quality and precision.
+                </p>
+              </li>
+              <li className="flex items-center gap-2">
+                <span>•</span>
+                <p>
+                  Ensure a joyful and dedicated experience for clients through
+                  every phase of the project.
+                </p>
+              </li>
+            </motion.ul>
           </div>
         </div>
       </div>
 
       {/* Mode MD */}
+
       <div className="hidden md:block px-10 lg:px-40 overflow-hidden">
-        <div className="p-5">
-        </div>
+        <div className="p-5"></div>
         <div className="md:grid grid-cols-3 gap-10">
           {/* foto */}
           <div className="col-1">
@@ -141,7 +138,6 @@ const About = () => {
                 initial={{ opacity: 0, y: 50 }}
                 transition={{ duration: 1 }}
                 whileInView={{ opacity: 1, y: 0 }}
-
                 src="img/about.jpeg"
                 alt=""
                 className="w-full h-full object-cover"
@@ -152,7 +148,8 @@ const About = () => {
             initial={{ opacity: 0, y: 50 }}
             transition={{ duration: 1 }}
             whileInView={{ opacity: 1, y: 0 }}
-          className="col-2 col-span-2 content-center">
+            className="col-2 col-span-2 content-center"
+          >
             <h1 className="font-raleway lg:text-xl">About Us</h1>
             <div className="grid grid-cols-2 gap-10">
               <div className="col-1">
@@ -186,10 +183,12 @@ const About = () => {
         {/* Visi Misi */}
         <div className="grid grid-cols-2 items-start justify-center gap-10 mt-5">
           <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          transition={{ duration: 1 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          className="">
+            initial={{ opacity: 0, y: 50 }}
+            transition={{ duration: 1 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            className=""
+          >
+            <div className="w-full bg-[#184E25] h-[2px] my-5"></div>
             <p className="text-center lg:text-2xl font-raleway mb-3 font-semibold">
               Vision
             </p>
@@ -200,10 +199,12 @@ const About = () => {
             </p>
           </motion.div>
           <motion.div
-          inital={{ opacity: 0, y: 50 }}
-          transition={{ duration: 1 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          className="">
+            inital={{ opacity: 0, y: 50 }}
+            transition={{ duration: 1 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            className=""
+          >
+            <div className="w-full bg-[#184E25] h-[2px] my-5"></div>
             <p className="lg:text-2xl text-center font-raleway mb-3 font-semibold">
               Mission
             </p>

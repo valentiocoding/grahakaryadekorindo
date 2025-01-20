@@ -16,7 +16,7 @@ const Navbar = () => {
         }`}
       >
         <img src="/logo.png" alt="" className="w-12" />
-        <div className="text-xs sm:text-base text-center font-poppins text-[#174E26]">
+        <div className="text-xs sm:text-base text-center md:pl-56 font-poppins text-[#174E26]">
           Interior Designer & Contractor | Furniture Manufacturer
         </div>
         <div className="hidden lg:flex space-x-5 text-[#174E26] font-poppins">
