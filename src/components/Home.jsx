@@ -5,7 +5,7 @@ const Home = () => {
   return (
     <>
       {/* Background Image */}
-      <div className="bg-[url('/img/home.png')] h-screen bg-cover bg-center relative">
+      <div className="bg-[url('/img/home.png')] h-screen bg-cover bg-center relative" id="home">
         {/* Overlay BG */}
         <div className="bg-black/50 h-full flex items-center justify-center absolute inset-0">
           {/* Text Content */}

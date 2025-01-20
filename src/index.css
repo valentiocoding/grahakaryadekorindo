@@ -3,3 +3,10 @@
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 
+/* Di dalam file styles.css atau tailwind.css */
+@layer base {
+    html {
+      scroll-behavior: smooth;
+    }
+  }
+  

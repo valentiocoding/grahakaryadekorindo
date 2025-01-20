@@ -1,5 +1,6 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
 import {
   faLinkedin,
   faWhatsapp,
@@ -24,6 +25,9 @@ const Footer = () => {
               <p>Whatsapp</p>
               <p>+62 858-8605-1338</p>
               <div className="flex space-x-3">
+                <a href="https://wa.me/6285886051338" target="_blank">
+                  <FontAwesomeIcon icon={faWhatsapp} className="text-2xl" />
+                </a>
                 <a href="https://instagram.com/gkdekorindo" target="_blank">
                   <FontAwesomeIcon icon={faInstagram} className="text-2xl" />
                 </a>
@@ -47,7 +51,11 @@ const Footer = () => {
           </div>
 
           <div className="text-center text-xs mt-6">
-            <p>&copy; 2025 Website by Parabellum</p>
+            <div className="flex items-center justify-center">&copy; 2025 Website by 
+              <a href="https://instagram.com/solvean.id">
+                <img src="/logo/solvean.png"  className=' w-20 ml-2' alt="" />
+                </a>
+                </div>
           </div>
         </div>
       </div>

@@ -1,0 +1,43 @@
+.scroller {
+    max-width: 75%;
+    overflow: hidden;
+    -webkit-mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
+    mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
+  }
+  
+  .scroller__inner {
+    display: flex;
+    gap: 1rem;
+    padding: 1rem 0;
+    width: max-content;
+    animation: scroll var(--animation-duration, 40s) linear infinite;
+  }
+  
+  .scroller[data-speed="fast"] {
+    --animation-duration: 20s;
+  }
+  
+  .scroller[data-speed="slow"] {
+    --animation-duration: 60s;
+  }
+  
+  @keyframes scroll {
+    to {
+      transform: translateX(calc(-50% - 0.5rem));
+    }
+  }
+  
+  .tag-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+  }
+  
+  .tag-list li {
+    padding: 1rem;
+    background: var(--clr-primary-400);
+    border-radius: 0.5rem;
+    box-shadow: 0 0.5rem 1rem -0.25rem var(--clr-primary-900);
+  }
+  

@@ -20,10 +20,10 @@ const Navbar = () => {
           Interior Designer & Contractor | Furniture Manufacturer
         </div>
         <div className="hidden lg:flex space-x-5 text-[#174E26] font-poppins">
-          <a href="Home">Home</a>
-          <a href="Home">About</a>
-          <a href="Home">Services</a>
-          <a href="Home">Contact</a>
+          <a href="#home">Home</a>
+          <a href="#about">About</a>
+          <a href="#services">Services</a>
+          <a href="#project">Project</a>
         </div>
         {/* Hamburger Menu */}
         <div className="lg:hidden space-y-2" onClick={toggleMenu}>
@@ -45,13 +45,13 @@ const Navbar = () => {
           initial={{ y: -1000 }}
           animate={{ y: 0 }}
           transition={{ duration: 0.5 }}
-          className="fixed bg-black bg-opacity-45 h-full w-full backdrop-blur-sm z-[1]"
+          className="fixed bg-[#174E26] text-white bg-opacity-45 h-full w-full backdrop-blur-sm z-[1]"
         >
-          <div className="flex flex-col items-center justify-center h-full">
-            <a href="">Home</a>
-            <a href="">About</a>
-            <a href="">Services</a>
-            <a href="">Contact</a>
+          <div className="flex flex-col items-center justify-center h-full space-y-4">
+            <a href="#home" className="bg-white rounded-full text-[#174E26] w-20 text-center">Home</a>
+            <a href="#about" className="bg-white rounded-full text-[#174E26] w-20 text-center">About</a>
+            <a href="#services" className="bg-white rounded-full text-[#174E26] w-20 text-center">Services</a>
+            <a href="#project" className="bg-white rounded-full text-[#174E26] w-20 text-center">Project</a>
           </div>
         </motion.div>
       )}
