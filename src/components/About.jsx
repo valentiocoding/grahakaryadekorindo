@@ -205,9 +205,14 @@ const About = () => {
             className=""
           >
             <div className="w-full bg-[#184E25] h-[2px] my-5"></div>
-            <p className="lg:text-2xl text-center font-raleway mb-3 font-semibold">
+            <motion.p
+              initial={{ opacity: 0, y: 50 }}
+              transition={{ duration: 1 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              className="lg:text-2xl text-center font-raleway mb-3 font-semibold"
+            >
               Mission
-            </p>
+            </motion.p>
             <motion.ul
               initial={{ opacity: 0, y: 50 }}
               transition={{ duration: 1 }}

@@ -9,7 +9,7 @@ const Service = () => {
       </h1>
       {/* Container */}
       <div className="flex flex-col lg:flex-row items-center justify-center gap-5 mb-10">
-        <div className="stress lg:w-[600px] w-80 md:w-full h-96 lg:h-[400px] overflow-hidden flex items-center justify-center">
+        <div className="stress lg:w-[400px] w-80 md:w-full h-96 lg:h-[450px] overflow-hidden flex items-center justify-center">
           {/* Overlay */}
           <div className="relative w-full h-full">
             <img
@@ -47,7 +47,7 @@ const Service = () => {
             </div>
           </div>
         </div>
-        <div className="stress lg:w-[600px] w-80 md:w-full h-96 lg:h-[400px] overflow-hidden flex items-center justify-center">
+        <div className="stress lg:w-[400px] w-80 md:w-full h-96 lg:h-[450px] overflow-hidden flex items-center justify-center">
           {/* Overlay */}
           <div className="relative w-full h-full">
             <img
@@ -84,7 +84,7 @@ const Service = () => {
             </div>
           </div>
         </div>
-        <div className="stress lg:w-[600px] w-80 h-96 md:w-full lg:h-[400px] overflow-hidden flex items-center justify-center">
+        <div className="stress lg:w-[400px] w-80 h-96 md:w-full lg:h-[450px] overflow-hidden flex items-center justify-center">
           {/* Overlay */}
           <div className="relative w-full h-full">
             <img
