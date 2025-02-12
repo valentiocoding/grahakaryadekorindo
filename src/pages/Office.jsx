@@ -3,7 +3,30 @@ import React from "react";
 
 import ReactFullpage from "@fullpage/react-fullpage";
 import Sidebar from "../components/Sidebar";
-import Carousel from "../components/Carousel";
+import Carousel from "./Carousel";
+
+const office1Images = [
+  '/office/1/1.jpg',
+  '/office/1/2.jpg',
+  '/office/1/3.jpg',
+  '/office/1/4.jpg',
+  '/office/1/5.jpg',
+];
+
+const office2Images = [
+  '/office/2/1.jpg',
+  '/office/2/2.jpg',
+  '/office/2/3.jpg',
+  '/office/2/4.jpg',
+  '/office/2/5.jpg',
+];
+
+const office3Images = [
+  '/office/3/1.jpg',
+  '/office/3/2.jpg',
+  '/office/3/3.jpg',
+  '/office/3/2.jpg',
+];
 
 const Office = () => {
   const fullpageOptions = {
@@ -15,29 +38,26 @@ const Office = () => {
   };
 
   return (
-    <div className="wrapper bg-red-300 flex">
+    <div className="wrapper  flex items-center justify-center">
       <Sidebar />
       <ReactFullpage
         {...fullpageOptions}
         render={() => (
           <ReactFullpage.Wrapper>
-            <div className="section">
-              <h1>Office 1</h1>
-              <div className="flex justify-center items-center gap-2">
-                <Carousel />
+            <div className="section bg-[url('/img/about.jpeg')] bg-cover bg-center h-full w-screen">
+              <div className="flex backdrop-blur-sm w-screen h-screen items-center">
+                <Carousel images={office1Images}/>
               </div>
             </div>
-            <div className="section">
-              <h1>Office 2</h1>
+            <div className="section bg-[url('/office/2/4.jpg')] bg-cover bg-center h-full w-screen">
+              <div className="flex backdrop-blur-sm w-screen h-screen items-center">
+                <Carousel images={office2Images}/>
+              </div>
             </div>
-            <div className="section">
-              <h1>Office 3</h1>
-            </div>
-            <div className="section">
-              <h1>Office 4</h1>
-            </div>
-            <div className="section">
-              <h1>Office 5</h1>
+            <div className="section bg-[url('/office/2/4.jpg')] bg-cover bg-center h-full w-screen">
+              <div className="flex backdrop-blur-sm w-screen h-screen items-center">
+                <Carousel images={office3Images}/>
+              </div>
             </div>
           </ReactFullpage.Wrapper>
         )}

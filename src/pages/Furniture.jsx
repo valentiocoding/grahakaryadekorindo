@@ -1,38 +1,43 @@
+"use client";
 import React from "react";
+
 import ReactFullpage from "@fullpage/react-fullpage";
 import Sidebar from "../components/Sidebar";
+import Carousel from "./Carousel";
 
-const Office = () => {
+const furniture1Images = [
+  '/furniture/1/1.jpg',
+  '/furniture/1/2.jpg',
+  '/furniture/1/3.jpg',
+  '/furniture/1/4.jpg',
+  '/furniture/1/5.jpg',
+  '/furniture/1/6.jpg',
+  '/furniture/1/7.jpg',
+];
+
+
+const Furniture = () => {
   const fullpageOptions = {
     scrollingSpeed: 1000,
     licenseKey: "gplv3-license",
     easingcss3: "ease-in-out",
-    credits: {enabled: false},
+    credits: { enabled: false },
     navigation: true, // Enable navigation dots if needed
-  }
+  };
 
   return (
-    <div className="wrapper bg-red-300 flex">
-      <Sidebar/>
+    <div className="wrapper  flex items-center justify-center">
+      <Sidebar />
       <ReactFullpage
         {...fullpageOptions}
         render={() => (
           <ReactFullpage.Wrapper>
-            <div className="section">
-              <h1>Furniture 1</h1>
+            <div className="section bg-[url('/booth/1/3.jpg')] bg-cover bg-center h-full w-screen">
+              <div className="flex backdrop-blur-md w-screen h-screen items-center">
+                <Carousel images={furniture1Images}/>
+              </div>
             </div>
-            <div className="section">
-              <h1>Furniture 2</h1>
-            </div>
-            <div className="section">
-              <h1>Furniture 3</h1>
-            </div>
-            <div className="section">
-              <h1>Furniture 4</h1>
-            </div>
-            <div className="section">
-              <h1>Furniture 5</h1>
-            </div>
+
           </ReactFullpage.Wrapper>
         )}
       />
@@ -40,4 +45,4 @@ const Office = () => {
   );
 };
 
-export default Office;
+export default Furniture;

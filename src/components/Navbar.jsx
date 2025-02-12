@@ -2,6 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { div } from "framer-motion/m";
 
+
 const Navbar = () => {
   const [isOpen, setIsOpen] = React.useState(false);
   const toggleMenu = () => {

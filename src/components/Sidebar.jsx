@@ -25,7 +25,7 @@ const Sidebar = () => {
 
   return (
     <>
-    <div className="fixed hidden lg:flex bottom-0 flex justify-between left-0 h-auto w-screen bg-[#174E26] text-white shadow-lg p-4">
+    <div className="fixed hidden lg:flex bottom-0 flex justify-between left-0 h-auto w-screen bg-[#174E26] z-[999] text-white shadow-lg p-4">
       <HashLink to="/#project" className="flex space-x-2 items-center ml-10">
         <FontAwesomeIcon icon={faChevronLeft} />
         <p>Go Back</p>
@@ -43,7 +43,7 @@ const Sidebar = () => {
     </div>
     {/* Mobile View */}
 
-    <div className='lg:hidden fixed bottom-0 text-sm flex justify-between left-0 h-auto w-screen bg-[#174E26] text-white shadow-lg p-4'>
+    <div className='lg:hidden fixed bottom-0 z-[999] text-sm flex justify-between left-0 h-auto w-screen bg-[#174E26] text-white shadow-lg p-4'>
       <HashLink to="/#project" className='flex space-x-2 items-center ml-10'>
         <FontAwesomeIcon icon={faChevronLeft} />
         <p>Go Back</p>

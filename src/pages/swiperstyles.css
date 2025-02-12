@@ -1,0 +1,9 @@
+:root {
+    --swiper-theme-color: #174E26;
+  }
+
+
+.swiper-slide img {
+user-select: none;
+pointer-events: none;
+}
