@@ -1,6 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { div } from "framer-motion/m";
+import about1 from "../assets/img/about.jpeg"
 
 const About = () => {
   return (
@@ -40,7 +41,7 @@ const About = () => {
               initial={{ opacity: 0, y: 50 }}
               transition={{ duration: 1 }}
               whileInView={{ opacity: 1, y: 0 }}
-              src="img/about.jpeg"
+              src={about1}
               alt=""
               className="h-auto w-full rounded-xl"
             />
@@ -129,25 +130,24 @@ const About = () => {
       {/* Mode MD */}
 
       <div className="hidden md:block px-10 lg:px-40 overflow-hidden">
-        <div className="p-5"></div>
-        <div className="md:grid grid-cols-3 gap-10">
+        <motion.div
+        initial={{ opacity: 0, y: 50 }}
+        transition={{ duration: 1 }}
+        whileInView={{ opacity: 1, y: 0 }}
+
+        className="md:grid grid-cols-3 gap-10 p-5">
           {/* foto */}
           <div className="col-1">
             <div className="h-64 lg:h-72 w-full overflow-hidden rounded-xl">
-              <motion.img
-                initial={{ opacity: 0, y: 50 }}
-                transition={{ duration: 1 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                src="img/about.jpeg"
+              <img
+                src={about1}
                 alt=""
+                loading="lazy"
                 className="w-full h-full object-cover"
               />
             </div>
           </div>
-          <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            transition={{ duration: 1 }}
-            whileInView={{ opacity: 1, y: 0 }}
+          <div
             className="col-2 col-span-2 content-center"
           >
             <h1 className="font-raleway lg:text-xl">About Us</h1>
@@ -178,14 +178,15 @@ const About = () => {
                 </p>
               </div>
             </div>
-          </motion.div>
-        </div>
+          </div>
+        </motion.div>
         {/* Visi Misi */}
-        <div className="grid grid-cols-2 items-start justify-center gap-10 mt-5">
-          <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            transition={{ duration: 1 }}
-            whileInView={{ opacity: 1, y: 0 }}
+        <motion.div 
+        initial={{ opacity: 0, y: 50 }}
+        transition={{ duration: 1 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        className="grid grid-cols-2 items-start justify-center gap-10 mt-5">
+          <div
             className=""
           >
             <div className="w-full bg-[#184E25] h-[2px] my-5"></div>
@@ -197,26 +198,17 @@ const About = () => {
               interior and exterior construction transforming clients functional
               and inspirational dreams into reality with joy and dedication.
             </p>
-          </motion.div>
-          <motion.div
-            inital={{ opacity: 0, y: 50 }}
-            transition={{ duration: 1 }}
-            whileInView={{ opacity: 1, y: 0 }}
+          </div>
+          <div
             className=""
           >
             <div className="w-full bg-[#184E25] h-[2px] my-5"></div>
-            <motion.p
-              initial={{ opacity: 0, y: 50 }}
-              transition={{ duration: 1 }}
-              whileInView={{ opacity: 1, y: 0 }}
+            <p
               className="lg:text-2xl text-center font-raleway mb-3 font-semibold"
             >
               Mission
-            </motion.p>
-            <motion.ul
-              initial={{ opacity: 0, y: 50 }}
-              transition={{ duration: 1 }}
-              whileInView={{ opacity: 1, y: 0 }}
+            </p>
+            <ul
               className="lg:text-md space-y-3 font-raleway text-justify text-sm"
             >
               <li className="flex items-center gap-2">
@@ -241,9 +233,9 @@ const About = () => {
                   every phase of the project.
                 </p>
               </li>
-            </motion.ul>
-          </motion.div>
-        </div>
+            </ul>
+          </div>
+        </motion.div>
       </div>
     </>
   );

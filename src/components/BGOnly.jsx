@@ -5,7 +5,7 @@ const FixedBG = ({ img }) => {
   return (
     <>
       <div className="w-full lg:h-64 h-32 md:h-44">
-        <img src={img} alt="" className="object-cover w-full h-full" />
+        <img src={img} alt="" className="object-cover w-full h-full" loading="lazy" />
       </div>
       <div className="w-full">
         {/* Bagian dengan background fixed */}

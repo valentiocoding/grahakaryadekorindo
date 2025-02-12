@@ -14,6 +14,11 @@
   import Booth from "./pages/Booth";
   import Furniture from "./pages/Furniture";
   import BGOnly from "./components/BGOnly";
+  import bgfixed1 from "../src/assets/img/bgfixed1.jpg";
+
+  import bgfixed from "../src/assets/img/bgfixed.jpeg";
+  import footer2 from "../src/assets/img/footer2.png";
+
 
   function App() {
     return (
@@ -34,11 +39,11 @@
                     <About />
                   </div>
                   <Service />
-                  <BGOnly img="img/bgfixed1.jpg" />
+                  <BGOnly img={bgfixed1} />
                   <Expertise />
-                  <FixedBG img="img/bgfixed.jpeg" />
+                  <FixedBG img={bgfixed} />
                   <Project />
-                  <FixedFooter img="img/footer2.png" />
+                  <FixedFooter img={footer2} />
                   <Footer />
                 </>
               }

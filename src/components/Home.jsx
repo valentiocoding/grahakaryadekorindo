@@ -1,11 +1,12 @@
 import React from "react";
 import { motion } from "framer-motion";
+import home from "../assets/img/home.png";
 
 const Home = () => {
   return (
     <>
       {/* Background Image */}
-      <div className="bg-[url('/img/home.png')] h-screen bg-cover bg-center relative" id="home">
+      <div className="h-screen bg-cover bg-center relative" style={{ backgroundImage: `url(${home})` }} id="home">
         {/* Overlay BG */}
         <div className="bg-black/50 h-full flex items-center justify-center absolute inset-0">
           {/* Text Content */}

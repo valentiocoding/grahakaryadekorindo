@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { div } from "framer-motion/m";
-
+import logo from "../assets/logo.png";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = React.useState(false);
@@ -16,7 +16,7 @@ const Navbar = () => {
           isOpen ? "fixed z-50" : ""
         }`}
       >
-        <img src="/logo.png" alt="" className="w-12" />
+        <img src={logo} alt="" className="w-12" />
         <div className="text-xs sm:text-base text-center md:pl-56 font-poppins text-[#174E26]">
           Interior Designer & Contractor | Furniture Manufacturer
         </div>

@@ -1,44 +1,28 @@
-import React, { useEffect } from 'react';
-import "./InfiniteScroll.css";
+
+import React from 'react'
+import CarouselLogo from '../pages/CarouselLogo'
+import logo1 from '../assets/logo/1.png'
+import logo2 from '../assets/logo/2.png'
+import logo3 from '../assets/logo/3.png'
+import logo4 from '../assets/logo/4.png'
+import logo5 from '../assets/logo/5.png'
+import logo6 from '../assets/logo/6.png'
+import logo7 from '../assets/logo/7.png'
+import logo8 from '../assets/logo/8.png'
+
+const logos = [
+  logo1, logo2, logo3, logo4, logo5, logo6, logo7, logo8
+]
 
 const InfiniteScroll = () => {
-  useEffect(() => {
-    if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-      const scrollers = document.querySelectorAll(".scroller");
-
-      scrollers.forEach((scroller) => {
-        scroller.setAttribute("data-animated", true);
-
-        const scrollerInner = scroller.querySelector(".scroller__inner");
-        const scrollerContent = Array.from(scrollerInner.children);
-
-        scrollerContent.forEach((item) => {
-          const duplicatedItem = item.cloneNode(true);
-          duplicatedItem.setAttribute("aria-hidden", true);
-          scrollerInner.appendChild(duplicatedItem);
-        });
-      });
-    }
-  }, []);
-
   return (
-    <>
-    <div className='font-raleway text-center py-2'>Expert Contrator For</div>
-    <div className="scroller border" data-speed="slow">
-      <ul className="tag-list scroller__inner">
-        <li><img src="/logo/1.png" className='w-24 lg:w-32' alt="" /></li>
-        <li><img src="/logo/2.png" className='w-24 lg:w-32' alt="" /></li>
-        <li><img src="/logo/3.png" className='w-24 lg:w-32' alt="" /></li>
-        <li><img src="/logo/4.png" className='w-24 lg:w-32' alt="" /></li>
-        <li><img src="/logo/5.png" className='w-24 lg:w-32' alt="" /></li>
-        <li><img src="/logo/6.png" className='w-24 lg:w-32' alt="" /></li>
-        <li><img src="/logo/7.png" className='w-24 lg:w-32' alt="" /></li>
-        <li><img src="/logo/8.png" className='w-24 lg:w-32' alt="" /></li>
-        <li><img src="" alt="" /></li>
-      </ul>
+    <div className=' w-[70%] flex item justify-center my-5'>
+      <CarouselLogo images={logos}/>
     </div>
-    </>
-  );
-};
+  )
+}
 
-export default InfiniteScroll;
+export default InfiniteScroll
+
+
+

@@ -6,6 +6,7 @@ import {
   faInstagram,
   faTiktok,
 } from "@fortawesome/free-brands-svg-icons";
+import solvean from "../assets/logo/solvean.png";
 
 const Footer = () => {
   return (
@@ -58,7 +59,7 @@ const Footer = () => {
         <div className="flex items-center justify-center">
           &copy; 2025 Website by
           <a href="https://instagram.com/solvean.id">
-            <img src="/logo/solvean.png" className=" w-20 ml-2" alt="" />
+            <img src={solvean} className=" w-20 ml-2" alt="" />
           </a>
         </div>
       </div>
