@@ -2,10 +2,10 @@ import { motion } from "framer-motion";
 import React from "react";
 import ProjectItem from "./ProjectItem";
 
-import office from "../assets/img/office.jpg";
-import residential from "../assets/img/residential.jpg";
-import booth from "../assets/img/booth.jpg";
-import furniture from "../assets/img/furniture.png";
+import office from "../assets/img/office.webp";
+import residential from "../assets/img/residential.webp";
+import booth from "../assets/img/booth.webp";
+import furniture from "../assets/img/furniture.webp";
 
 const Project = () => {
   const projects = [
@@ -40,27 +40,28 @@ const Project = () => {
   ];
 
   return (
-    <motion.div
-    initial={{ opacity: 0, y: 50 }}
-        transition={{ duration: 1 }}
-        whileInView={{ opacity: 1, y: 0 }}
-    className="flex flex-col justify-center items-center m-5" id="project">
-      <h1
-        
-        className="font-raleway font-bold text-xl mb-10"
-      >
-        Our Project
-      </h1>
+    <div
+      // initial={{ opacity: 0, y: 50 }}
+      // transition={{ duration: 1 }}
+      // whileInView={{ opacity: 1, y: 0 }}
+      // viewport={{ once: true }}
+      className="flex flex-col justify-center items-center m-5"
+      id="project"
+    >
+      <h1 className="font-raleway font-bold text-xl mb-10">Our Project</h1>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 w-full max-w-6xl">
         {projects.map((project, index) => (
-          <motion.div whileHover={{ scale: 1.1 }} key={index}>
+          <div
+            // whileHover={{ scale: 1.1 }}
+            key={index}
+          >
             <a href={project.link}>
-              <ProjectItem {...project} /> 
+              <ProjectItem {...project} />
             </a>
-          </motion.div>
+          </div>
         ))}
       </div>
-    </motion.div>
+    </div>
   );
 };
 

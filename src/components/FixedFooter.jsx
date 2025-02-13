@@ -32,7 +32,7 @@ const FixedBG = ({ img }) => {
         className="absolute inset-0 bg-cover bg-center"
         style={{
           backgroundImage: `url(${img})`,
-          backgroundAttachment: "fixed",
+          // backgroundAttachment: "fixed",
           backgroundPosition: "center",
           backgroundSize: "100%",
         }}

@@ -5,7 +5,7 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import './swiperStyles.css';
-import { div } from 'framer-motion/m';
+// import { div } from 'framer-motion/m';
 
 const CarouselLogo = ({ images }) => {
   return (

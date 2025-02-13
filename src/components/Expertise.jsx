@@ -1,23 +1,20 @@
 import React from "react";
 import { motion } from "framer-motion";
-import designnplan from "../assets/img/design.jpg"
-import building from "../assets/img/building.png"
-import mep from "../assets/img/mep.png"
-import custom from "../assets/img/custom.png"
+import designnplan from "../assets/img/design.webp";
+import building from "../assets/img/building.webp";
+import mep from "../assets/img/mep.webp";
+import custom from "../assets/img/custom.webp";
 
 const Expertise = () => {
   return (
-    <motion.div
-    initial={{ opacity: 0, y: 50 }}
-    transition={{ duration: 1 }}
-    whileInView={{ opacity: 1, y: 0 }}
-    className="mt-5 mx-5 flex flex-col items-center mb-10">
-      <h1
-
-        className="font-raleway font-bold text-xl mb-5"
-      >
-        Our Expertise
-      </h1>
+    <div
+      // initial={{ opacity: 0, y: 50 }}
+      // transition={{ duration: 1 }}
+      // whileInView={{ opacity: 1, y: 0 }}
+      // viewport={{ once: true }}
+      className="mt-5 mx-5 flex flex-col items-center mb-10"
+    >
+      <h1 className="font-raleway font-bold text-xl mb-5">Our Expertise</h1>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 w-full max-w-6xl">
         {[
           {
@@ -34,7 +31,7 @@ const Expertise = () => {
           },
           {
             title: "MEP Installation",
-            imgSrc:mep,
+            imgSrc: mep,
             description:
               "Securing your mechanical, electrical, and plumbing with precise work for long-term benefits.",
           },
@@ -57,20 +54,16 @@ const Expertise = () => {
                 loading="lazy" // Memastikan gambar menutupi seluruh kontainer
               />
             </div>
-            <h2
-              className="mt-4 font-bold font-raleway text-center"
-            >
+            <h2 className="mt-4 font-bold font-raleway text-center">
               {expertise.title}
             </h2>
-            <p
-              className="mt-2 text-center font-raleway text-sm flex-grow"
-            >
+            <p className="mt-2 text-center font-raleway text-sm flex-grow">
               {expertise.description}
             </p>
           </div>
         ))}
       </div>
-    </motion.div>
+    </div>
   );
 };
 
