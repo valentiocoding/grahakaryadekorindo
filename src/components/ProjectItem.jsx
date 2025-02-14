@@ -1,11 +1,15 @@
-import React from "react";
+import React, { memo } from "react";
 import { motion } from "framer-motion";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
 
-const ProjectItem = ({ image, title, description }) => {
+const ProjectItem = memo(({ image, title, description, link }) => {
   return (
-    <div className="office flex flex-col items-center justify-center">
+    <motion.a
+      href={link}
+      whileHover={{ scale: 1.05 }}
+      className="flex flex-col items-center justify-center"
+    >
       <div className="h-64 w-full overflow-hidden rounded-xl">
         <img
           src={image}
@@ -15,15 +19,15 @@ const ProjectItem = ({ image, title, description }) => {
         />
       </div>
       <div className="flex gap-5 items-center justify-center mt-4">
-        <h2 className=" font-bold font-raleway">{title}</h2>
+        <h2 className="font-bold font-raleway">{title}</h2>
         <FontAwesomeIcon
           icon={faArrowUpRightFromSquare}
           className="text-[#184E25]"
         />
       </div>
       <p className="mt-2 text-center font-raleway text-sm">{description}</p>
-    </div>
+    </motion.a>
   );
-};
+});
 
 export default ProjectItem;

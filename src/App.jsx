@@ -1,42 +1,43 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import Office from "./pages/Office";
+import { lazy, Suspense } from "react";
 import Navbar from "./components/Navbar";
-import Home from "./components/Home";
-import About from "./components/About";
-import Service from "./components/Service";
-import FixedBG from "./components/FixedBG";
-import Expertise from "./components/Expertise";
-import Project from "./components/Project";
 import Footer from "./components/Footer";
 import FixedFooter from "./components/FixedFooter";
-import InfiniteScroll from "./components/InfiniteScroll";
-import Residential from "./pages/Residential";
-import Booth from "./pages/Booth";
-import Furniture from "./pages/Furniture";
+// import ScrollToTop from "./components/ScrollToTop"; // Tambahkan helper untuk scroll ke atas otomatis
 import BGOnly from "./components/BGOnly";
+import FixedBG from "./components/FixedBG";
 import bgfixed1 from "../src/assets/img/bgfixed1.webp";
-
-import bgfixed from "../src/assets/img/bgfixed.webp";
+import bgfixed from "../src/assets/img/office.webp";
 import footer2 from "../src/assets/img/footer2.webp";
+
+// Lazy Load untuk meningkatkan performa
+const Home = lazy(() => import("./components/Home"));
+const About = lazy(() => import("./components/About"));
+const Service = lazy(() => import("./components/Service"));
+const Expertise = lazy(() => import("./components/Expertise"));
+const Project = lazy(() => import("./components/Project"));
+const InfiniteScroll = lazy(() => import("./components/InfiniteScroll"));
+const Office = lazy(() => import("./pages/Office"));
+const Residential = lazy(() => import("./pages/Residential"));
+const Booth = lazy(() => import("./pages/Booth"));
+const Furniture = lazy(() => import("./pages/Furniture"));
 
 function App() {
   return (
-    <div className="overflow-hidden">
-      <Router>
+    <Router>
+      <Navbar />
+      <Suspense fallback={<div className="text-center p-10">Loading...</div>}>
         <Routes>
-          {/* Rute untuk halaman utama */}
+          {/* Halaman utama */}
           <Route
             path="/"
             element={
-              <>
-                <Navbar />
+              <div className="overflow-hidden">
                 <Home />
                 <div className="flex justify-center items-center w-screen flex-col">
                   <InfiniteScroll />
                 </div>
-                <div id="about">
-                  <About />
-                </div>
+                <About />
                 <Service />
                 <BGOnly img={bgfixed1} />
                 <Expertise />
@@ -44,17 +45,17 @@ function App() {
                 <Project />
                 <FixedFooter img={footer2} />
                 <Footer />
-              </>
+              </div>
             }
           />
-          {/* Rute untuk halaman portfolio */}
+          {/* Halaman Portfolio */}
           <Route path="/office" element={<Office />} />
           <Route path="/residential" element={<Residential />} />
           <Route path="/booth" element={<Booth />} />
           <Route path="/furniture" element={<Furniture />} />
         </Routes>
-      </Router>
-    </div>
+      </Suspense>
+    </Router>
   );
 }
 

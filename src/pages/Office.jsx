@@ -18,7 +18,7 @@ import office52 from "../assets/office/2/5.jpg"
 import office13 from "../assets/office/3/1.jpg"
 import office23 from "../assets/office/3/2.jpg"
 import office33 from "../assets/office/3/3.jpg"
-import about from "../assets/img/about.jpeg"
+import about from "../assets/img/about.webp"
 
 
 const office1Images = [

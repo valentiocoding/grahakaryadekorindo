@@ -1,57 +1,32 @@
-import React from "react";
+import React, { useMemo } from "react";
+import { motion } from "framer-motion";
 
-const FixedBG = ({ img }) => {
+const FixedFooter = ({ img }) => {
+  // Simpan style dalam useMemo agar lebih efisien
+  const bgStyle = useMemo(
+    () => ({
+      backgroundImage: `url(${img || "/default-image.webp"})`, // Fallback jika img undefined
+      backgroundPosition: "center",
+      backgroundSize: "cover",
+    }),
+    [img]
+  );
+
   return (
-    <>
-    <div className="relative w-full lg:hidden">
-      {/* Background Fixed */}
-      <div
-        className="absolute inset-0 bg-cover bg-center"
-        style={{
-          backgroundImage: `url(${img})`,
-          backgroundPosition: "center",
-          backgroundSize: "100%",
-        }}
-      ></div>
-
+    <div
+      className="relative w-full h-[40vh] md:h-[60vh] lg:h-[70vh] flex items-center justify-center text-center"
+      style={bgStyle}
+    >
       {/* Overlay */}
-      <div className="absolute inset-0 bg-gray-600 bg-opacity-35 flex items-center justify-center text-center">
+      <div className="absolute inset-0 bg-gray-600 bg-opacity-35 flex items-center justify-center">
         <p className="text-white font-raleway text-lg md:text-2xl lg:text-3xl font-light">
           Do business with the <span className="font-semibold">best.</span> Do
           business with <span className="font-semibold">trust.</span> Do
           business with <span className="font-semibold">us.</span>
         </p>
       </div>
-
-      {/* Height Adjustment */}
-      <div className="h-40 md:h-80 lg:h-96"></div>
     </div>
-    <div className="relative w-full hidden lg:block">
-      {/* Background Fixed */}
-      <div
-        className="absolute inset-0 bg-cover bg-center"
-        style={{
-          backgroundImage: `url(${img})`,
-          // backgroundAttachment: "fixed",
-          backgroundPosition: "center",
-          backgroundSize: "100%",
-        }}
-      ></div>
-
-      {/* Overlay */}
-      <div className="absolute inset-0 bg-gray-600 bg-opacity-35 flex items-center justify-center text-center">
-        <p className="text-white font-raleway text-lg md:text-2xl lg:text-3xl font-light">
-          Do business with the <span className="font-semibold">best.</span> Do
-          business with <span className="font-semibold">trust.</span> Do
-          business with <span className="font-semibold">us.</span>
-        </p>
-      </div>
-
-      {/* Height Adjustment */}
-      <div className="h-40 md:h-80 lg:h-96"></div>
-    </div>
-    </>
   );
 };
 
-export default FixedBG;
+export default FixedFooter;

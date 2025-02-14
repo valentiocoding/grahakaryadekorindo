@@ -9,3 +9,7 @@
     scroll-behavior: smooth;
   }
 }
+
+.animate-section {
+  will-change: opacity, transform;
+}

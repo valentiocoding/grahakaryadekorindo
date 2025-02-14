@@ -1,20 +1,26 @@
-import { div } from "framer-motion/m";
-import React from "react";
+import React, { useMemo } from "react";
 
-const FixedBG = ({ img }) => {
+const BGOnly = ({ img }) => {
+  // Simpan style dalam useMemo agar lebih efisien
+  const bgStyle = useMemo(
+    () => ({
+      backgroundImage: `url(${img || "/default-image.webp"})`, // Fallback jika img undefined
+      backgroundPosition: "center",
+      backgroundSize: "cover",
+    }),
+    [img]
+  );
+
   return (
-    <>
-      <div className="w-full lg:h-64 h-32 md:h-44">
-        <img src={img} alt="" className="object-cover w-full h-full" loading="lazy" />
-      </div>
-      <div className="w-full">
-        {/* Bagian dengan background fixed */}
-
-        {/* Konten lebih lanjut */}
-        <div className="p-4 space-y-4">{/* Konten tambahan lainnya */}</div>
-      </div>
-    </>
+    <div className="w-full h-32 md:h-44 lg:h-64" style={bgStyle}>
+      <img
+        src={img || "/default-image.webp"} // Gunakan fallback image
+        alt="Fixed Background"
+        className="object-cover w-full h-full"
+        loading="lazy"
+      />
+    </div>
   );
 };
 
-export default FixedBG;
+export default BGOnly;

@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import home from "../assets/img/home.png";
+import home from "../assets/img/home.webp";
 
 const Home = () => {
   return (
@@ -17,7 +17,7 @@ const Home = () => {
           <motion.div
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
-            transition={{ duration: 3 }}
+            transition={{ duration: 1 }}
             viewport={{ once: true }}
             className="text-white font-light text-3xl sm:text-5xl lg:text-6xl font-poppins text-center"
           >

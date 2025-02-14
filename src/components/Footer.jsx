@@ -6,7 +6,7 @@ import {
   faInstagram,
   faTiktok,
 } from "@fortawesome/free-brands-svg-icons";
-import solvean from "../assets/logo/solvean.png";
+import solvean from "../assets/logo/solvean.webp";
 
 const Footer = () => {
   return (

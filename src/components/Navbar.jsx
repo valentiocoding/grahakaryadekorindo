@@ -49,10 +49,30 @@ const Navbar = () => {
           className="fixed bg-[#174E26] text-white bg-opacity-45 h-full w-full backdrop-blur-sm z-[1]"
         >
           <div className="flex flex-col items-center justify-center h-full space-y-4">
-            <a href="#home" className="bg-white rounded-full text-[#174E26] w-20 text-center">Home</a>
-            <a href="#about" className="bg-white rounded-full text-[#174E26] w-20 text-center">About</a>
-            <a href="#services" className="bg-white rounded-full text-[#174E26] w-20 text-center">Services</a>
-            <a href="#project" className="bg-white rounded-full text-[#174E26] w-20 text-center">Project</a>
+            <a
+              href="#home"
+              className="bg-white rounded-full text-[#174E26] w-20 text-center"
+            >
+              Home
+            </a>
+            <a
+              href="#about"
+              className="bg-white rounded-full text-[#174E26] w-20 text-center"
+            >
+              About
+            </a>
+            <a
+              href="#services"
+              className="bg-white rounded-full text-[#174E26] w-20 text-center"
+            >
+              Services
+            </a>
+            <a
+              href="#project"
+              className="bg-white rounded-full text-[#174E26] w-20 text-center"
+            >
+              Project
+            </a>
           </div>
         </motion.div>
       )}
