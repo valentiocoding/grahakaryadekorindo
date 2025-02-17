@@ -25,7 +25,7 @@ const ProjectItem = memo(({ image, title, description, link }) => {
           className="text-[#184E25]"
         />
       </div>
-      <p className="mt-2 text-center font-raleway text-sm">{description}</p>
+      <p className="mt-2 text-center font-raleway text-sm flex-1">{description}</p>
     </motion.a>
   );
 });

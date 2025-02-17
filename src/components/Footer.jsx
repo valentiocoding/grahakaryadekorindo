@@ -23,18 +23,22 @@ const Footer = () => {
           <div className="social">
             <h1 className="font-semibold">Contact</h1>
             <div className="flex gap-2 text-xl items-center text-center justify-center">
-              <a href="https://wa.me/6285886051338">
+              <a href="https://wa.me/6285886051338"
+                  aria-label="Whatsapp">
                 <FontAwesomeIcon icon={faWhatsapp} />
               </a>
-              <a href="https://www.tiktok.com/@gkdekorindo">
+              <a href="https://www.tiktok.com/@gkdekorindo"
+                  aria-label="Tiktok">
                 <FontAwesomeIcon icon={faTiktok} />
               </a>
-              <a href="https://www.instagram.com/gkdekorindo">
+              <a href="https://www.instagram.com/gkdekorindo"
+                  aria-label="Instagram">
                 <FontAwesomeIcon icon={faInstagram} />
               </a>
               <a
                 href="https://www.linkedin.com/company/gkdekorindo"
                 className=""
+                aria-label="Linkedin"
               >
                 <FontAwesomeIcon icon={faLinkedin} />
               </a>
@@ -58,7 +62,8 @@ const Footer = () => {
       <div className="text-center text-xs">
         <div className="flex items-center justify-center">
           &copy; 2025 Website by
-          <a href="https://instagram.com/solvean.id">
+          <a href="https://instagram.com/solvean.id"
+            aria-label="Instagram">
             <img src={solvean} className=" w-20 ml-2" alt="" />
           </a>
         </div>
