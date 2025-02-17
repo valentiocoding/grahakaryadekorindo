@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import home from "../assets/img/home.webp";
 
 const Home = () => {
-  const [bgLoaded, setBgLoaded] = useState<boolean>(false);
+  const [bgLoaded, setBgLoaded] = useState(false);
 
   useEffect(() => {
     const img = new Image();
