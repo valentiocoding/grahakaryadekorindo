@@ -15,6 +15,7 @@ const InfiniteScroll = () => {
 
   useEffect(() => {
     setLogos([logo1, logo2, logo3, logo4, logo5, logo6, logo7, logo8]);
+    setIsLogoRendered(true);
   }, []);
 
   return (
@@ -22,7 +23,7 @@ const InfiniteScroll = () => {
       {isLogoRendered ? (
         <CarouselLogo images={logos} />
       ) : (
-        <div>Loading...</div>
+        <></>
       )}
     </div>
   );
