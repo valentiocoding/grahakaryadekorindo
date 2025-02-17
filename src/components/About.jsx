@@ -1,6 +1,8 @@
+// src/components/About.js
 import React, { useMemo } from "react";
 import { motion } from "framer-motion";
 import about1 from "../assets/img/about.webp";
+import AnimatedDiv from "./AnimatedDiv"; // Import komponen animasi
 
 const About = () => {
   const missionList = useMemo(
@@ -13,14 +15,9 @@ const About = () => {
   );
 
   return (
-    <div className="">
+    <div>
       {/* Mobile Mode */}
-      <motion.div
-        initial={{ opacity: 0, y: 50 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        className="sm:mx-10 md:hidden"
-      >
+      <AnimatedDiv className="sm:mx-10 md:hidden">
         <div className="flex flex-col justify-center items-center mx-5">
           <h3 className="font-raleway text-center mt-10">About Us</h3>
           <h1 className="font-raleway text-center font-semibold text-2xl">
@@ -28,72 +25,39 @@ const About = () => {
           </h1>
           <p className="font-raleway my-3 text-justify text-sm">
             Started as PP (Partisia Pramita). We emerged as the precise solution
-            in the interior design and contractor expert industries. After more
-            than 16 years and successfully completing over{" "}
-            <span className="font-semibold">100,000 sqm</span> of projects. We
-            decided to embark on a larger purpose in 2010.
+            in the interior design and contractor expert industries...
           </p>
 
           {/* Image */}
-          <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            transition={{ duration: 1, delay: 0.5 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="h-48 w-full overflow-hidden flex justify-center items-center rounded-xl"
-          >
-            <img
-              src={about1}
-              alt="About"
-              className="h-auto w-full rounded-xl"
-              loading="lazy"
-            />
-          </motion.div>
+          <AnimatedDiv delay={0.5} className="h-48 w-full overflow-hidden flex justify-center items-center rounded-xl">
+            <img src={about1} alt="About" className="h-auto w-full rounded-xl" loading="lazy" />
+          </AnimatedDiv>
 
           <h1 className="font-raleway mt-5 text-center font-semibold text-2xl">
             Rebranding 2010
           </h1>
           <p className="font-raleway my-3 text-justify text-sm">
             We decided to rebrand the company as{" "}
-            <span className="font-semibold">GKD</span> (Graha Karya Dekorindo)
-            following a change in ownership. To this day, our company continues
-            to grow strong, serving numerous valuable clients from various
-            industries.
+            <span className="font-semibold">GKD</span> (Graha Karya Dekorindo)...
           </p>
 
           {/* Vision */}
-          <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            transition={{ duration: 0.5, delay: 0.6 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            className="bg-[#184E25] px-5 py-2 rounded-xl text-white"
-          >
+          <AnimatedDiv delay={0.6} className="bg-[#184E25] px-5 py-2 rounded-xl text-white">
             <h1 className="font-bold font-raleway text-center my-3">Vision</h1>
             <p className="font-raleway text-justify text-sm">
-              Positioned as a leading company specializing in personalized
-              interior and exterior construction, transforming clients'
-              functional and inspirational dreams into reality with joy and
-              dedication.
+              Positioned as a leading company specializing in personalized interior and exterior construction...
             </p>
-          </motion.div>
+          </AnimatedDiv>
 
           {/* Mission */}
-          <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            transition={{ duration: 0.5, delay: 0.7 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            className="bg-[#184E25] px-5 py-2 rounded-xl text-white mt-5"
-          >
+          <AnimatedDiv delay={0.7} className="bg-[#184E25] px-5 py-2 rounded-xl text-white mt-5">
             <h1 className="my-3 font-bold font-raleway text-center">Mission</h1>
             <motion.ul
               initial="hidden"
               animate="visible"
               variants={{
                 hidden: { opacity: 0 },
-                visible: {
-                  opacity: 1,
-                  transition: { staggerChildren: 0.3, delayChildren: 0.3 },
-                },
+                visible: { opacity: 1, transition: { staggerChildren: 0.3, delayChildren: 0.3 } },
               }}
               className="space-y-3 font-raleway text-justify text-sm"
             >
@@ -112,30 +76,20 @@ const About = () => {
                 </motion.li>
               ))}
             </motion.ul>
-          </motion.div>
+          </AnimatedDiv>
         </div>
-      </motion.div>
+      </AnimatedDiv>
 
       {/* Desktop Mode */}
-      <div className="hidden md:block px-10 lg:px-40 overflow-hidden ">
+      <div className="hidden md:block px-10 lg:px-40 overflow-hidden">
         <div className="md:grid grid-cols-3 gap-10 p-5">
           {/* Image */}
           <div className="h-64 lg:h-72 w-full overflow-hidden rounded-xl">
-            <img
-              src={about1}
-              alt="About"
-              loading="lazy"
-              className="w-full h-full object-cover"
-            />
+            <img src={about1} alt="About" loading="lazy" className="w-full h-full object-cover" />
           </div>
 
           {/* Text */}
-          <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="col-span-2 content-center"
-          >
+          <AnimatedDiv className="col-span-2 content-center">
             <h1 className="font-raleway lg:text-xl">About Us</h1>
             <div className="grid grid-cols-2 gap-10">
               <div>
@@ -143,12 +97,7 @@ const About = () => {
                   Founded 1994
                 </h1>
                 <p className="font-raleway text-sm lg:text-md">
-                  Started as PP (Partisia Pramita). We emerged as the precise
-                  solution in the interior design and contractor expert
-                  industries. After more than 16 years and successfully
-                  completing over{" "}
-                  <span className="font-semibold">100,000 sqm</span> of
-                  projects. We decided to embark on a larger purpose in 2010.
+                  Started as PP (Partisia Pramita)...
                 </p>
               </div>
               <div>
@@ -157,29 +106,19 @@ const About = () => {
                 </h1>
                 <p className="font-raleway text-sm lg:text-md">
                   We decided to rebrand the company as{" "}
-                  <span className="font-semibold">GKD</span> (Graha Karya
-                  Dekorindo) following a change in ownership. To this day, our
-                  company continues to grow strong, serving numerous valuable
-                  clients from various industries.
+                  <span className="font-semibold">GKD</span> (Graha Karya Dekorindo)...
                 </p>
               </div>
             </div>
-          </motion.div>
+          </AnimatedDiv>
         </div>
 
         {/* Vision & Mission */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.5, delay: 0.4 }}
-          className="grid grid-cols-2 items-start justify-center gap-10 mt-5"
-        >
+        <AnimatedDiv delay={0.4} className="grid grid-cols-2 items-start justify-center gap-10 mt-5">
           {["Vision", "Mission"].map((title, index) => (
             <div key={index}>
               <div className="w-full bg-[#184E25] h-[2px] my-5"></div>
-              <p className="text-center lg:text-2xl font-raleway mb-3 font-semibold">
-                {title}
-              </p>
+              <p className="text-center lg:text-2xl font-raleway mb-3 font-semibold">{title}</p>
               <p className="font-raleway text-justify lg:text-md">
                 {title === "Vision"
                   ? "Positioned as a leading company specializing in personalized interior and exterior construction."
@@ -187,7 +126,7 @@ const About = () => {
               </p>
             </div>
           ))}
-        </motion.div>
+        </AnimatedDiv>
       </div>
     </div>
   );

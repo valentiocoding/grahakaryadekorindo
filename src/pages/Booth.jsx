@@ -42,7 +42,7 @@ const Booth = () => {
         {...fullpageOptions}
         render={() => (
           <ReactFullpage.Wrapper>
-            <div className="section bg-[url('booth/1/3.jpg')] bg-cover bg-center h-full w-screen">
+            <div className="section  bg-cover bg-center h-full w-screen" style={{ backgroundImage: `url(${booth3})` }}>
               <div className="flex backdrop-blur-md w-screen h-screen items-center">
                 <Carousel images={booth1Images}/>
               </div>

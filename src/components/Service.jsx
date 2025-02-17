@@ -1,4 +1,4 @@
-import React, { memo, useMemo } from "react";
+import React, { memo, useMemo, useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import pantai from "../assets/img/pantai.webp";
 import salam from "../assets/img/salam.webp";
@@ -46,45 +46,58 @@ const Service = memo(() => {
       {/* Grid Service */}
       <div className="flex flex-col lg:flex-row items-center justify-center gap-5 mb-10">
         {services.map((service, index) => (
-          <div
-            key={index}
-            className="lg:w-[400px] w-80 md:w-full h-96 lg:h-[450px] overflow-hidden flex items-center justify-center"
-          >
-            <div className="relative w-full h-full">
-              <img
-                src={service.imgSrc}
-                alt={service.title}
-                className="w-full h-full object-cover"
-                loading="lazy"
-              />
-              {/* Overlay */}
-              <div className="absolute inset-0 bg-black bg-opacity-50 text-white flex flex-col justify-center items-center p-5">
-                <p className="font-raleway font-bold mb-5 text-xl text-center">
-                  {service.title}
-                </p>
-                <motion.div
-                  initial={{ opacity: 0 }}
-                  whileInView={{ opacity: 1 }}
-                  transition={{
-                    duration: 0.6,
-                    ease: "easeOut",
-                    delay: index * 0.2, // Animasi bertahap
-                  }}
-                  viewport={{ once: true, amount: 1 }}
-                  className="flex px-5 gap-4 items-center"
-                >
-                  <div className="h-full w-1 bg-white"></div>
-                  <p className="font-raleway text-sm w-64 text-justify">
-                    {service.description}
-                  </p>
-                </motion.div>
-              </div>
-            </div>
-          </div>
+          <ServiceCard key={index} service={service} index={index} />
         ))}
       </div>
     </div>
   );
 });
+
+const ServiceCard = ({ service, index }) => {
+  const [imgLoaded, setImgLoaded] = useState(false);
+
+  useEffect(() => {
+    const img = new Image();
+    img.src = service.imgSrc;
+    img.onload = () => setImgLoaded(true);
+  }, [service.imgSrc]);
+
+  return (
+    <div className="lg:w-[400px] w-80 md:w-full h-96 lg:h-[450px] overflow-hidden flex items-center justify-center">
+      <div className="relative w-full h-full">
+        {/* Gambar dengan efek lazy load */}
+        <div
+          className={`w-full h-full bg-cover bg-center transition-opacity duration-500 ${
+            imgLoaded ? "opacity-100" : "opacity-0"
+          }`}
+          style={{ backgroundImage: imgLoaded ? `url(${service.imgSrc})` : "none" }}
+        />
+
+        {/* Overlay */}
+        <div className="absolute inset-0 bg-black bg-opacity-50 text-white flex flex-col justify-center items-center p-5">
+          <p className="font-raleway font-bold mb-5 text-xl text-center">
+            {service.title}
+          </p>
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{
+              duration: 0.6,
+              ease: "easeOut",
+              delay: index * 0.2, // Animasi bertahap
+            }}
+            viewport={{ once: true, amount: 1 }}
+            className="flex px-5 gap-4 items-center"
+          >
+            <div className="h-full w-1 bg-white"></div>
+            <p className="font-raleway text-sm w-64 text-justify">
+              {service.description}
+            </p>
+          </motion.div>
+        </div>
+      </div>
+    </div>
+  );
+};
 
 export default Service;

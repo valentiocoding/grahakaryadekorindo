@@ -1,4 +1,4 @@
-import React, { memo, useMemo } from "react";
+import React, { memo, useMemo, useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import designnplan from "../assets/img/design.webp";
 import building from "../assets/img/building.webp";
@@ -42,49 +42,63 @@ const Expertise = memo(() => {
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 w-full max-w-6xl">
         {expertiseList.map((expertise, index) => (
-          <div
-            key={index}
-            className="flex flex-col items-stretch justify-between"
-          >
-            <div className="h-64 w-full overflow-hidden rounded-xl">
-              <img
-                src={expertise.imgSrc}
-                alt={expertise.title}
-                className="w-full h-full object-cover"
-                loading="lazy"
-              />
-            </div>
-            <motion.h2
-              initial={{ opacity: 0, scale: 0.95 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              transition={{
-                duration: 0.5,
-                ease: "easeOut",
-                delay: index * 0.1, // Beri delay agar animasi bertahap
-              }}
-              viewport={{ once: true, amount: 1 }}
-              className="mt-4 font-bold font-raleway text-center"
-            >
-              {expertise.title}
-            </motion.h2>
-            <motion.p
-              initial={{ opacity: 0, scale: 0.95 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              transition={{
-                duration: 0.5,
-                ease: "easeOut",
-                delay: index * 0.1, // Beri delay agar animasi bertahap
-              }}
-              viewport={{ once: true, amount: 1 }}
-              className="mt-2 text-center font-raleway text-sm flex-grow"
-            >
-              {expertise.description}
-            </motion.p>
-          </div>
+          <ExpertiseCard key={index} expertise={expertise} index={index} />
         ))}
       </div>
     </div>
   );
 });
+
+const ExpertiseCard = ({ expertise, index }) => {
+  const [imgLoaded, setImgLoaded] = useState(false);
+
+  useEffect(() => {
+    const img = new Image();
+    img.src = expertise.imgSrc;
+    img.onload = () => setImgLoaded(true);
+  }, [expertise.imgSrc]);
+
+  return (
+    <div className="flex flex-col items-stretch justify-between">
+      {/* Lazy Loaded Background Image */}
+      <div
+        className={`h-64 w-full overflow-hidden rounded-xl bg-cover bg-center transition-opacity duration-500 ${
+          imgLoaded ? "opacity-100" : "opacity-0"
+        }`}
+        style={{ backgroundImage: imgLoaded ? `url(${expertise.imgSrc})` : "none" }}
+      />
+
+      {/* Title */}
+      <motion.h2
+        initial={{ opacity: 0, scale: 0.95 }}
+        whileInView={{ opacity: 1, scale: 1 }}
+        transition={{
+          duration: 0.5,
+          ease: "easeOut",
+          delay: index * 0.1, // Animasi bertahap
+        }}
+        viewport={{ once: true, amount: 1 }}
+        className="mt-4 font-bold font-raleway text-center"
+      >
+        {expertise.title}
+      </motion.h2>
+
+      {/* Description */}
+      <motion.p
+        initial={{ opacity: 0, scale: 0.95 }}
+        whileInView={{ opacity: 1, scale: 1 }}
+        transition={{
+          duration: 0.5,
+          ease: "easeOut",
+          delay: index * 0.1, // Animasi bertahap
+        }}
+        viewport={{ once: true, amount: 0.2 }}
+        className="mt-2 text-center font-raleway text-sm flex-grow"
+      >
+        {expertise.description}
+      </motion.p>
+    </div>
+  );
+};
 
 export default Expertise;
