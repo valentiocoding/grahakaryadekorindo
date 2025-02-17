@@ -27,15 +27,15 @@ const Home = () => {
           <motion.div
             initial={{ opacity: 0, y: 0 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1.5, ease: "easeOut" }}
-            viewport={{ once: true, amount: 0.3 }}
-            className="text-white font-light text-3xl sm:text-5xl lg:text-6xl font-poppins text-center"
+            transition={{ duration: 0.5, ease: "easeIn" }}
+            viewport={{ once: true, amount: 0 }}
+            className="text-white font-light text-3xl sm:text-5xl lg:text-6xl font-poppins text-center gap-2 flex flex-col"
           >
-            <p className="mb-2">
-              BUILDING <span className="font-bold">DREAMS</span>
+            <p className="uppercase">
+              building <span className="font-bold">dreams</span>
             </p>
-            <p>
-              CREATING <span className="font-bold">LEGACY</span>
+            <p className="uppercase">
+              creating <span className="font-bold">legacy</span>
             </p>
           </motion.div>
         </div>
