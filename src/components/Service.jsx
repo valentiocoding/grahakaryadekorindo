@@ -1,100 +1,69 @@
-import React, { memo, useMemo, useState, useEffect } from "react";
-import { motion } from "framer-motion";
+import React from "react";
 import pantai from "../assets/img/pantai.webp";
 import salam from "../assets/img/salam.webp";
 import guarantee from "../assets/img/guarantee.webp";
 
-const Service = memo(() => {
-  // Data Service
-  const services = useMemo(
-    () => [
-      {
-        title: "STRESS-FREE",
-        imgSrc: pantai,
-        description:
-          "Our services include project managers in every aspect to ease your responsibility in controlling and overseeing your project.",
-      },
-      {
-        title: "FLEXIBILITY",
-        imgSrc: salam,
-        description:
-          "Utilize our services from the beginning or in areas that are not covered by previous contractors.",
-      },
-      {
-        title: "GUARANTEE",
-        imgSrc: guarantee,
-        description:
-          "We guarantee that our work is precisely done according to our agreement with you, backed by retention.",
-      },
-    ],
-    []
-  );
+import { motion } from "framer-motion";
+const services = [
+  {
+    image: pantai,
+    title: "STRESS-FREE",
+    description:
+      "Our services include project managers in every aspect to ease your responsibility in controlling and overseeing your project.",
+  },
+  {
+    image: salam,
+    title: "FLEXIBILITY",
+    description:
+      "Utilize our services from the beginning or in areas that are not covered by previous contractors.",
+  },
+  {
+    image: guarantee,
+    title: "GUARANTEE",
+    description:
+      "We guarantee that our work is precisely done according to our agreement with you, backed by retention.",
+  },
+];
 
+const Service = () => {
   return (
-    <div className="flex flex-col items-center justify-center px-5 md:px-10 lg:px-40 my-20">
+    <div className="flex flex-col items-center justify-center px-5 md:px-10 lg:px-40">
       {/* Judul */}
-      <motion.h1
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        viewport={{ once: true, amount: 1 }}
-        className="font-raleway font-bold text-center my-5"
-        id="services"
-      >
+      <h1 className="font-raleway font-bold text-center my-5 text-lg ">
         OUR CORE VALUE WILL BE DELIVERED IN A FORM OF
-      </motion.h1>
+      </h1>
 
-      {/* Grid Service */}
-      <div className="flex flex-col lg:flex-row items-center justify-center gap-5 mb-10">
+      {/* Grid */}
+      <div className="flex flex-col w-full lg:flex-row items-center justify-center gap-5 mb-10">
         {services.map((service, index) => (
-          <ServiceCard key={index} service={service} index={index} />
-        ))}
-      </div>
-    </div>
-  );
-});
-
-const ServiceCard = ({ service, index }) => {
-  const [imgLoaded, setImgLoaded] = useState(false);
-
-  useEffect(() => {
-    const img = new Image();
-    img.src = service.imgSrc;
-    img.onload = () => setImgLoaded(true);
-  }, [service.imgSrc]);
-
-  return (
-    <div className="lg:w-[400px] w-80 md:w-full h-96 lg:h-[450px] overflow-hidden flex items-center justify-center">
-      <div className="relative w-full h-full">
-        {/* Gambar dengan efek lazy load */}
-        <div
-          className={`w-full h-full bg-cover bg-center transition-opacity duration-500 ${
-            imgLoaded ? "opacity-100" : "opacity-0"
-          }`}
-          style={{ backgroundImage: imgLoaded ? `url(${service.imgSrc})` : "none" }}
-        />
-
-        {/* Overlay */}
-        <div className="absolute inset-0 bg-black bg-opacity-50 text-white flex flex-col justify-center items-center p-5">
-          <p className="font-raleway font-bold mb-5 text-xl text-center">
-            {service.title}
-          </p>
-          <motion.div
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            transition={{
-              duration: 0.6,
-              ease: "easeOut",
-              delay: index * 0.2, // Animasi bertahap
+          <div
+            key={index}
+            className="w-full h-96 lg:h-[450px] overflow-hidden flex items-center justify-center rounded-lg shadow-lg lg:max-w-[400px] min-w-[400px]"
+            style={{
+              backgroundImage: `url(${service.image})`,
+              backgroundPosition: "center",
+              backgroundSize: "cover",
             }}
-            viewport={{ once: true, amount: 1 }}
-            className="flex px-5 gap-4 items-center"
           >
-            <div className="h-full w-1 bg-white"></div>
-            <p className="font-raleway text-sm w-64 text-justify">
-              {service.description}
-            </p>
-          </motion.div>
-        </div>
+            <div className="relative w-full h-full bg-black bg-opacity-60 text-white flex flex-col items-center justify-center px-5">
+              <p className="font-raleway font-bold mb-5 text-center text-lg md:text-xl">
+                {service.title}
+              </p>
+              <motion.div
+                initial={{ opacity: 0, y: 50 }}
+                transition={{ duration: 0.3 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: 1 }}
+                className="flex gap-4 items-center"
+              >
+                <div className="h-full w-1 bg-white"></div>
+                <p className="font-raleway text-md w-64 text-justify">
+                  {service.description}
+                </p>
+              </motion.div>
+            </div>
+          </div>
+        ))}
       </div>
     </div>
   );

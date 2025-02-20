@@ -44,21 +44,14 @@ const Project = () => {
   );
 
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 50 }}
-      transition={{ duration: 1 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
-      className="flex flex-col justify-center items-center m-5"
-      id="project"
-    >
+    <div className="flex flex-col justify-center items-center m-5" id="project">
       <h1 className="font-raleway font-bold text-xl mb-10">Our Project</h1>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 w-full max-w-6xl">
         {projects.map((project, index) => (
           <ProjectItem key={index} {...project} />
         ))}
       </div>
-    </motion.div>
+    </div>
   );
 };
 

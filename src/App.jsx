@@ -25,7 +25,6 @@ const Furniture = lazy(() => import("./pages/Furniture"));
 function App() {
   return (
     <Router>
-      <Navbar />
       <Suspense fallback={<div className="text-center p-10">Loading...</div>}>
         <Routes>
           {/* Halaman utama */}
@@ -33,6 +32,7 @@ function App() {
             path="/"
             element={
               <div className="overflow-hidden">
+                <Navbar />
                 <Home />
                 <div className="flex justify-center items-center w-screen flex-col">
                   <InfiniteScroll />

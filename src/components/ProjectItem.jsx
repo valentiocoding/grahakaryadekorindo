@@ -18,14 +18,28 @@ const ProjectItem = memo(({ image, title, description, link }) => {
           loading="lazy"
         />
       </div>
-      <div className="flex gap-5 items-center justify-center mt-4">
+      <motion.div
+        initial={{ opacity: 0, y: 50 }}
+        transition={{ duration: 0.3 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 1 }}
+        className="flex gap-5 items-center justify-center mt-4"
+      >
         <h2 className="font-bold font-raleway">{title}</h2>
         <FontAwesomeIcon
           icon={faArrowUpRightFromSquare}
           className="text-[#184E25]"
         />
-      </div>
-      <p className="mt-2 text-center font-raleway text-sm flex-1">{description}</p>
+      </motion.div>
+      <motion.p
+        initial={{ opacity: 0, y: 50 }}
+        transition={{ duration: 0.3 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 1 }}
+        className="mt-2 text-center font-raleway text-sm flex-1"
+      >
+        {description}
+      </motion.p>
     </motion.a>
   );
 });

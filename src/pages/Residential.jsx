@@ -4,55 +4,89 @@ import React from "react";
 import ReactFullpage from "@fullpage/react-fullpage";
 import Sidebar from "../components/Sidebar";
 import Carousel from "./Carousel";
-import residential1 from "../assets/residential/1/1.jpg"
-import residential2 from "../assets/residential/1/2.jpg"
-import residential3 from "../assets/residential/1/3.jpg"
-import residential4 from "../assets/residential/1/4.jpg"
-import residential5 from "../assets/residential/1/5.jpg"
-import residential6 from "../assets/residential/1/6.jpg"
-import residential7 from "../assets/residential/1/7.jpg"
-import residential21 from "../assets/residential/2/1.jpg"
-import residential22 from "../assets/residential/2/2.jpg"
-import residential23 from "../assets/residential/2/3.jpg"
-import residential24 from "../assets/residential/2/4.jpg"
-import residential25 from "../assets/residential/2/5.jpg"
-import residential26 from "../assets/residential/2/6.jpg"
-import residential31 from "../assets/residential/3/1.jpg"
-import residential32 from "../assets/residential/3/2.jpg"
-import residential33 from "../assets/residential/3/3.jpg"
-import residential34 from "../assets/residential/3/4.jpg"
-import residential35 from "../assets/residential/3/5.jpg"
-import residential36 from "../assets/residential/3/6.jpg"
-import residential37 from "../assets/residential/3/7.jpg"
 
+import fhouse1 from "../assets/residential/FHouse-6/1.webp";
+import fhouse2 from "../assets/residential/FHouse-6/2.webp";
+import fhouse3 from "../assets/residential/FHouse-6/3.webp";
+import fhouse4 from "../assets/residential/FHouse-6/4.webp";
+import fhouse5 from "../assets/residential/FHouse-6/5.webp";
+import fhouse6 from "../assets/residential/FHouse-6/6.webp";
 
-const residential1Images = [
-  residential1,
-  residential2,
-  residential3,
-  residential4,
-  residential5,
-  residential6,
-  residential7,
+import gplex1 from "../assets/residential/GPlex-6/1.webp";
+import gplex2 from "../assets/residential/GPlex-6/2.webp";
+import gplex3 from "../assets/residential/GPlex-6/3.webp";
+import gplex4 from "../assets/residential/GPlex-6/4.webp";
+import gplex5 from "../assets/residential/GPlex-6/5.webp";
+import gplex6 from "../assets/residential/GPlex-6/6.webp";
+
+import kitchen1 from "../assets/residential/Kitchen-11/1.webp";
+import kitchen2 from "../assets/residential/Kitchen-11/2.webp";
+import kitchen3 from "../assets/residential/Kitchen-11/3.webp";
+import kitchen4 from "../assets/residential/Kitchen-11/4.webp";
+import kitchen5 from "../assets/residential/Kitchen-11/5.webp";
+import kitchen6 from "../assets/residential/Kitchen-11/6.webp";
+import kitchen7 from "../assets/residential/Kitchen-11/7.webp";
+import kitchen8 from "../assets/residential/Kitchen-11/8.webp";
+import kitchen9 from "../assets/residential/Kitchen-11/9.webp";
+import kitchen10 from "../assets/residential/Kitchen-11/10.webp";
+import kitchen11 from "../assets/residential/Kitchen-11/11.webp";
+
+import wardrobe1 from "../assets/residential/Wardrobe-9/1.webp";
+import wardrobe2 from "../assets/residential/Wardrobe-9/2.webp";
+import wardrobe3 from "../assets/residential/Wardrobe-9/3.webp";
+import wardrobe4 from "../assets/residential/Wardrobe-9/4.webp";
+import wardrobe5 from "../assets/residential/Wardrobe-9/5.webp";
+import wardrobe6 from "../assets/residential/Wardrobe-9/6.webp";
+import wardrobe7 from "../assets/residential/Wardrobe-9/7.webp";
+import wardrobe8 from "../assets/residential/Wardrobe-9/8.webp";
+import wardrobe9 from "../assets/residential/Wardrobe-9/9.webp";
+
+import whhouse1 from "../assets/residential/WhHouse-7/1.webp";
+import whhouse2 from "../assets/residential/WhHouse-7/2.webp";
+import whhouse3 from "../assets/residential/WhHouse-7/3.webp";
+import whhouse4 from "../assets/residential/WhHouse-7/4.webp";
+import whhouse5 from "../assets/residential/WhHouse-7/5.webp";
+import whhouse6 from "../assets/residential/WhHouse-7/6.webp";
+import whhouse7 from "../assets/residential/WhHouse-7/7.webp";
+
+const fhouse = [fhouse1, fhouse2, fhouse3, fhouse4, fhouse5, fhouse6];
+
+const gplex = [gplex1, gplex2, gplex3, gplex4, gplex5, gplex6];
+
+const kitchen = [
+  kitchen1,
+  kitchen2,
+  kitchen3,
+  kitchen4,
+  kitchen5,
+  kitchen6,
+  kitchen7,
+  kitchen8,
+  kitchen9,
+  kitchen10,
+  kitchen11,
 ];
 
-const residential2Images = [
-  residential21,
-  residential22,
-  residential23,
-  residential24,
-  residential25,
-  residential26
+const wardrobe = [
+  wardrobe1,
+  wardrobe2,
+  wardrobe3,
+  wardrobe4,
+  wardrobe5,
+  wardrobe6,
+  wardrobe7,
+  wardrobe8,
+  wardrobe9,
 ];
 
-const residential3Images = [
-  residential31,
-  residential32,
-  residential33,
-  residential34,
-  residential35,
-  residential36,
-  residential37
+const whhouse = [
+  whhouse1,
+  whhouse2,
+  whhouse3,
+  whhouse4,
+  whhouse5,
+  whhouse6,
+  whhouse7,
 ];
 
 const Residential = () => {
@@ -71,19 +105,50 @@ const Residential = () => {
         {...fullpageOptions}
         render={() => (
           <ReactFullpage.Wrapper>
-            <div className="section  bg-cover bg-center h-full w-screen" style={{ backgroundImage: `url(${residential1})` }}>
+            {/* Fhouse */}
+            <div
+              className="section  bg-cover bg-center h-full w-screen"
+              style={{ backgroundImage: `url(${fhouse1})` }}
+            >
               <div className="flex backdrop-blur-sm w-screen h-screen items-center">
-                <Carousel images={residential1Images}/>
+                <Carousel images={fhouse} />
               </div>
             </div>
-            <div className="section bg-cover bg-center h-full w-screen" style={{ backgroundImage: `url(${residential2})` }}>
+            {/* kitchen */}
+            <div
+              className="section bg-cover bg-center h-full w-screen"
+              style={{ backgroundImage: `url(${kitchen1})` }}
+            >
               <div className="flex backdrop-blur-sm w-screen h-screen items-center">
-                <Carousel images={residential2Images}/>
+                <Carousel images={kitchen} />
               </div>
             </div>
-            <div className="section bg-cover bg-center h-full w-screen">
+            {/* wardrobe */}
+            <div
+              className="section bg-cover bg-center h-full w-screen"
+              style={{ backgroundImage: `url(${wardrobe1})` }}
+            >
               <div className="flex backdrop-blur-sm w-screen h-screen items-center">
-                <Carousel images={residential3Images}/>
+                <Carousel images={wardrobe} />
+              </div>
+            </div>
+            {/* whhouse */}
+            <div
+              className="section bg-cover bg-center h-full w-screen"
+              style={{ backgroundImage: `url(${whhouse1})` }}
+            >
+              <div className="flex backdrop-blur-sm w-screen h-screen items-center">
+                <Carousel images={whhouse} />
+              </div>
+            </div>
+
+            {/* gplex */}
+            <div
+              className="section bg-cover bg-center h-full w-screen"
+              style={{ backgroundImage: `url(${gplex1})` }}
+            >
+              <div className="flex backdrop-blur-sm w-screen h-screen items-center">
+                <Carousel images={gplex} />
               </div>
             </div>
           </ReactFullpage.Wrapper>
