@@ -3,27 +3,53 @@ import React from "react";
 import ReactFullpage from "@fullpage/react-fullpage";
 import Sidebar from "../components/Sidebar";
 import Carousel from "./Carousel";
-import booth1 from "../assets/booth/1/1.jpg";
-import booth2 from "../assets/booth/1/2.jpg";
-import booth3 from "../assets/booth/1/3.jpg";
-import booth4 from "../assets/booth/1/4.jpg";
-import booth5 from "../assets/booth/1/5.jpg";
-import booth6 from "../assets/booth/1/6.jpg";
-import booth7 from "../assets/booth/1/7.jpg";
-import booth8 from "../assets/booth/1/8.jpg";
-import booth9 from "../assets/booth/1/9.jpg";
+import Buzz1 from "../assets/booth/Buzz-2/1.webp";
+import Buzz2 from "../assets/booth/Buzz-2/2.webp";
 
-const booth1Images = [
-  booth1,
-  booth2,
-  booth3,
-  booth4,
-  booth5,
-  booth6,
-  booth7,
-  booth8,
-  booth9,
+import Carrow1 from "../assets/booth/Carrow-14/1.webp";
+import Carrow2 from "../assets/booth/Carrow-14/2.webp";
+import Carrow3 from "../assets/booth/Carrow-14/3.webp";
+import Carrow4 from "../assets/booth/Carrow-14/4.webp";
+import Carrow5 from "../assets/booth/Carrow-14/5.webp";
+import Carrow6 from "../assets/booth/Carrow-14/6.webp";
+import Carrow7 from "../assets/booth/Carrow-14/7.webp";
+import Carrow8 from "../assets/booth/Carrow-14/8.webp";
+import Carrow9 from "../assets/booth/Carrow-14/9.webp";
+import Carrow10 from "../assets/booth/Carrow-14/10.webp";
+import Carrow11 from "../assets/booth/Carrow-14/11.webp";
+import Carrow12 from "../assets/booth/Carrow-14/12.webp";
+import Carrow13 from "../assets/booth/Carrow-14/13.webp";
+import Carrow14 from "../assets/booth/Carrow-14/14.webp";
+
+import CnF1 from "../assets/booth/CnF-3/1.webp";
+import CnF2 from "../assets/booth/CnF-3/2.webp";
+import CnF3 from "../assets/booth/CnF-3/3.webp";
+
+import Oregon1 from "../assets/booth/Oregon-3/1.webp";
+import Oregon2 from "../assets/booth/Oregon-3/2.webp";
+import Oregon3 from "../assets/booth/Oregon-3/3.webp";
+
+import Yasuka1 from "../assets/booth/Yasuka-1/1.webp";
+
+const Buzz = [
+  Buzz1, Buzz2,Buzz1, Buzz2
 ];
+
+const Carrow = [
+  Carrow1, Carrow2, Carrow3, Carrow4, Carrow5, Carrow6, Carrow7, Carrow8, Carrow9, Carrow10, Carrow11, Carrow12, Carrow13, Carrow14
+]
+
+const CnF = [
+  CnF1, CnF2, CnF3, CnF1
+]
+
+const Oregon = [
+  Oregon1, Oregon2, Oregon3, Oregon1
+]
+
+const Yasuka = [
+  Yasuka1, Yasuka1, Yasuka1, Yasuka1
+]
 
 const Booth = () => {
   const fullpageOptions = {
@@ -43,10 +69,42 @@ const Booth = () => {
           <ReactFullpage.Wrapper>
             <div
               className="section  bg-cover bg-center h-full w-screen"
-              style={{ backgroundImage: `url(${booth3})` }}
+              style={{ backgroundImage: `url(${Carrow1})` }}
             >
               <div className="flex backdrop-blur-md w-screen h-screen items-center">
-                <Carousel images={booth1Images} />
+                <Carousel images={Carrow} />
+              </div>
+            </div>
+            <div
+              className="section  bg-cover bg-center h-full w-screen"
+              style={{ backgroundImage: `url(${Oregon1})` }}
+            >
+              <div className="flex backdrop-blur-md w-screen h-screen items-center">
+                <Carousel images={Oregon} />
+              </div>
+            </div>
+            <div
+              className="section  bg-cover bg-center h-full w-screen"
+              style={{ backgroundImage: `url(${Buzz1})` }}
+            >
+              <div className="flex backdrop-blur-md w-screen h-screen items-center">
+                <Carousel images={Buzz} />
+              </div>
+            </div>
+            <div
+              className="section  bg-cover bg-center h-full w-screen"
+              style={{ backgroundImage: `url(${CnF1})` }}
+            >
+              <div className="flex backdrop-blur-md w-screen h-screen items-center">
+                <Carousel images={CnF} />
+              </div>
+            </div>
+            <div
+              className="section  bg-cover bg-center h-full w-screen"
+              style={{ backgroundImage: `url(${Yasuka1})` }}
+            >
+              <div className="flex backdrop-blur-md w-screen h-screen items-center">
+                <Carousel images={Yasuka} />
               </div>
             </div>
           </ReactFullpage.Wrapper>
