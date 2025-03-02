@@ -2,7 +2,7 @@ import React from "react";
 
 import ReactFullpage from "@fullpage/react-fullpage";
 import Sidebar from "../components/Sidebar";
-import Carousel from "./Carousel";
+import SecondCarousel from "./SecondCarousel";
 import Buzz1 from "../assets/booth/Buzz-2/1.webp";
 import Buzz2 from "../assets/booth/Buzz-2/2.webp";
 
@@ -53,64 +53,72 @@ const Yasuka = [
 
 const Booth = () => {
   const fullpageOptions = {
-    scrollingSpeed: 1000,
+    scrollingSpeed: 800,
     licenseKey: "gplv3-license",
     easingcss3: "ease-in-out",
     credits: { enabled: false },
-    navigation: true, // Enable navigation dots if needed
+    responsiveWidth: 768
+    // navigation: true, // Enable navigation dots if needed
   };
 
   return (
-    <div className="wrapper  flex items-center justify-center">
+    <div className="wrapper hidden md:flex  items-center justify-center">
       <Sidebar />
       <ReactFullpage
         {...fullpageOptions}
         render={() => (
           <ReactFullpage.Wrapper>
-            <div
-              className="section  bg-cover bg-center h-full w-screen"
-              style={{ backgroundImage: `url(${Carrow1})` }}
-            >
-              <div className="flex backdrop-blur-md w-screen h-screen items-center">
-                <Carousel images={Carrow} />
+            <div className="section h-screen w-screen bg-cover bg-center">
+              <div className="flex justify-center items-center">
+                <SecondCarousel
+                  images={Buzz}
+                  location={"JAKARTA"}
+                  judul={"BUZZ COFFEE"}
+                />
               </div>
             </div>
-            <div
-              className="section  bg-cover bg-center h-full w-screen"
-              style={{ backgroundImage: `url(${Oregon1})` }}
-            >
-              <div className="flex backdrop-blur-md w-screen h-screen items-center">
-                <Carousel images={Oregon} />
+            <div className="section h-screen w-screen bg-cover bg-center">
+              <div className="flex justify-center items-center">
+                <SecondCarousel
+                  images={Carrow}
+                  location={"TANGERANG"}
+                  judul={"CARROW COFFEE"}
+                />
               </div>
             </div>
-            <div
-              className="section  bg-cover bg-center h-full w-screen"
-              style={{ backgroundImage: `url(${Buzz1})` }}
-            >
-              <div className="flex backdrop-blur-md w-screen h-screen items-center">
-                <Carousel images={Buzz} />
+            <div className="section h-screen w-screen bg-cover bg-center">
+              <div className="flex justify-center items-center">
+                <SecondCarousel
+                  images={CnF}
+                  location={"TANGERANG"}
+                  judul={"C&F SUMMARECON MALL SERPONG"}
+                />
               </div>
             </div>
-            <div
-              className="section  bg-cover bg-center h-full w-screen"
-              style={{ backgroundImage: `url(${CnF1})` }}
-            >
-              <div className="flex backdrop-blur-md w-screen h-screen items-center">
-                <Carousel images={CnF} />
+            <div className="section h-screen w-screen bg-cover bg-center">
+              <div className="flex justify-center items-center">
+                <SecondCarousel
+                  images={Oregon}
+                  location={"LAMPUNG"}
+                  judul={"OREGON BOOTH"}
+                />
               </div>
             </div>
-            <div
-              className="section  bg-cover bg-center h-full w-screen"
-              style={{ backgroundImage: `url(${Yasuka1})` }}
-            >
-              <div className="flex backdrop-blur-md w-screen h-screen items-center">
-                <Carousel images={Yasuka} />
+            <div className="section h-screen w-screen bg-cover bg-center">
+              <div className="flex justify-center items-center">
+                <SecondCarousel
+                  images={Yasuka}
+                  location={"GKD"}
+                  judul={"YASUKA"}
+                />
               </div>
             </div>
           </ReactFullpage.Wrapper>
         )}
       />
     </div>
+
+ 
   );
 };
 

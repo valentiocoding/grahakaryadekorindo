@@ -62,6 +62,12 @@ import BinusH3 from "../assets//office/BinusH-5/3.webp";
 import BinusH4 from "../assets//office/BinusH-5/4.webp";
 import BinusH5 from "../assets//office/BinusH-5/5.webp";
 
+import BinusI1 from "../assets//office/BinusI-2/1.webp";
+import BinusI2 from "../assets//office/BinusI-2/2.webp";
+
+import BinusJ1 from "../assets//office/BinusJ-2/1.webp";
+import BinusJ2 from "../assets//office/BinusJ-2/2.webp";
+
 import CnF1 from "../assets//office/CnF-5/1.webp";
 import CnF2 from "../assets//office/CnF-5/2.webp";
 import CnF3 from "../assets//office/CnF-5/3.webp";
@@ -142,6 +148,8 @@ const BinusE = [BinusE1, BinusE2];
 const BinusF = [BinusF1, BinusF2, BinusF3, BinusF4];
 const BinusG = [BinusG1, BinusG2, BinusG3, BinusG4];
 const BinusH = [BinusH1, BinusH2, BinusH3, BinusH4, BinusH5];
+const BinusI = [BinusI1, BinusI2];
+const BinusJ = [BinusJ1, BinusJ2];
 
 const CnF = [CnF1, CnF2, CnF3, CnF4, CnF5];
 
@@ -173,10 +181,11 @@ const Xander = [
 
 const Office = () => {
   const fullpageOptions = {
-    scrollingSpeed: 500,
+    scrollingSpeed: 800,
     licenseKey: "gplv3-license",
     easingcss3: "ease-in-out",
     credits: { enabled: false },
+    responsiveWidth: 768
     // navigation: true, // Enable navigation dots if needed
   };
 
@@ -187,7 +196,7 @@ const Office = () => {
         {...fullpageOptions}
         render={() => (
           <ReactFullpage.Wrapper>
-            <div className="section h-full w-screen bg-cover bg-center">
+            <div className="section h-screen w-screen bg-cover bg-center">
               <div className="flex justify-center items-center">
                 <SecondCarousel
                   images={BinusA}
@@ -196,162 +205,135 @@ const Office = () => {
                 />
               </div>
             </div>
-            <div className="section bg-cover bg-center h-full w-screen">
-              <div className=" flex justify-center backdrop-blur-sm w-screen h-screen items-center p-14">
-                <div className="grid grid-cols-2 items-center justify-center">
-                  <div className=" ">
-                    <Carousel
-                      images={BinusA}
-                      judul={"BINUS International University & School"}
-                      location={"SEMARANG"}
-                    />
-                  </div>
-                  <div
-                    className=" items-center justify-center flex flex-col backdrop-blur-lg h-screen"
-                    style={{
-                      backgroundImage: `url(${BinusA[0]})`,
-                      backgroundSize: "cover",
-                      backgroundPosition: "center",
-                    }}
-                  >
-                    <div className="h-full flex flex-col justify-center backdrop-blur-sm">
-                      <div className="mb-10">
-                        <h1 className="text-center font-raleway font-bold">
-                          BINUS International University & School
-                        </h1>
-                        <p className=" text-center font-raleway">SEMARANG</p>
-                      </div>
-                      <p className="font-poppins text-center">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Beatae, quibusdam ipsam. Omnis, libero beatae? Inventore
-                        ex aliquid iure ratione corrupti!Lorem ipsum dolor sit
-                        amet consectetur adipisicing elit. Beatae, quibusdam
-                        ipsam. Omnis, libero beatae? Inventore ex aliquid iure
-                        ratione corrupti!Lorem ipsum dolor sit amet consectetur
-                        adipisicing elit. Beatae, quibusdam ipsam. Omnis, libero
-                        beatae? Inventore ex aliquid iure ratione corrupti!
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div
-              className="section  bg-cover bg-center h-full w-screen"
-              style={{ backgroundImage: `url(${BinusB1})` }}
-            >
-              <div className="flex backdrop-blur-sm w-screen h-screen items-center">
-                <Carousel
+            
+            <div className="section h-screen w-screen bg-cover bg-center">
+              <div className="flex justify-center items-center">
+                <SecondCarousel
                   images={BinusB}
                   location={"BEKASI"}
                   judul={"BINUS University"}
                 />
               </div>
             </div>
-            <div
-              className="section bg-cover bg-center h-full w-screen"
-              style={{ backgroundImage: `url(${BinusC1})` }}
-            >
-              <div className="flex backdrop-blur-sm w-screen h-screen items-center">
-                <Carousel
+
+            <div className="section h-screen w-screen bg-cover bg-center">
+              <div className="flex justify-center items-center">
+                <SecondCarousel
                   images={BinusC}
                   location={"JAKARTA"}
                   judul={"BINUS University (JWC Campus)"}
                 />
               </div>
             </div>
-            <div
-              className="section bg-cover bg-center h-full w-screen"
-              style={{ backgroundImage: `url(${BinusD1})` }}
-            >
-              <div className="flex backdrop-blur-sm w-screen h-screen items-center">
-                <Carousel
+            <div className="section h-screen w-screen bg-cover bg-center">
+              <div className="flex justify-center items-center">
+                <SecondCarousel
                   images={BinusD}
                   location={"BANDUNG"}
                   judul={"BINUS University"}
                 />
               </div>
             </div>
-            <div
-              className="section bg-cover bg-center h-full w-screen"
-              style={{ backgroundImage: `url(${BinusE1})` }}
-            >
-              <div className="flex backdrop-blur-sm w-screen h-screen items-center">
-                <Carousel
+
+            <div className="section h-screen w-screen bg-cover bg-center">
+              <div className="flex justify-center items-center">
+                <SecondCarousel
                   images={BinusE}
                   location={"JAKARTA"}
                   judul={"BINUS University FX Sudirman"}
                 />
               </div>
             </div>
-            <div
-              className="section bg-cover bg-center h-full w-screen"
-              style={{ backgroundImage: `url(${BinusF1})` }}
-            >
-              <div className="flex backdrop-blur-sm w-screen h-screen items-center">
-                <Carousel
+            
+
+            <div className="section h-screen w-screen bg-cover bg-center">
+              <div className="flex justify-center items-center">
+                <SecondCarousel
                   images={BinusF}
                   location={"TANGERANG"}
                   judul={"BINUS University Mall Alam Sutera"}
                 />
               </div>
             </div>
-            <div
-              className="section bg-cover bg-center h-full w-screen"
-              style={{ backgroundImage: `url(${BinusG1})` }}
-            >
-              <div className="flex backdrop-blur-sm w-screen h-screen items-center">
-                <Carousel
+            
+
+            <div className="section h-screen w-screen bg-cover bg-center">
+              <div className="flex justify-center items-center">
+                <SecondCarousel
                   images={BinusG}
                   location={"MEDAN"}
                   judul={"BINUS University"}
                 />
               </div>
             </div>
-            <div
-              className="section bg-cover bg-center h-full w-screen"
-              style={{ backgroundImage: `url(${BinusH1})` }}
-            >
-              <div className="flex backdrop-blur-sm w-screen h-screen items-center">
-                <Carousel
+
+            <div className="section h-screen w-screen bg-cover bg-center">
+              <div className="flex justify-center items-center">
+                <SecondCarousel
                   images={BinusH}
                   location={"JAKARTA"}
                   judul={"BINUS University RTTO Office"}
                 />
               </div>
             </div>
-            <div
-              className="section bg-cover bg-center h-full w-screen"
-              style={{ backgroundImage: `url(${CnF1})` }}
-            >
-              <div className="flex backdrop-blur-sm w-screen h-screen items-center">
-                <Carousel images={CnF} />
+            
+            <div className="section h-screen w-screen bg-cover bg-center">
+              <div className="flex justify-center items-center">
+                <SecondCarousel
+                  images={BinusI}
+                  location={"BEKASI"}
+                  judul={"BINUS University Summarecon"}
+                />
               </div>
             </div>
-            <div
-              className="section bg-cover bg-center h-full w-screen"
-              style={{ backgroundImage: `url(${Dikai1})` }}
-            >
-              <div className="flex backdrop-blur-sm w-screen h-screen items-center">
-                <Carousel images={Dikai} />
+            
+            <div className="section h-screen w-screen bg-cover bg-center">
+              <div className="flex justify-center items-center">
+                <SecondCarousel
+                  images={BinusJ}
+                  location={"SURABAYA"}
+                  judul={"BINUS University"}
+                />
               </div>
             </div>
-            <div
-              className="section bg-cover bg-center h-full w-screen"
-              style={{ backgroundImage: `url(${VTOffice1})` }}
-            >
-              <div className="flex backdrop-blur-sm w-screen h-screen items-center">
-                <Carousel images={VTOffice} />
+            
+            <div className="section h-screen w-screen bg-cover bg-center">
+              <div className="flex justify-center items-center">
+                <SecondCarousel
+                  images={CnF}
+                  location={"JAKARTA"}
+                  judul={"C&F OFFICE"}
+                />
               </div>
             </div>
-            <div
-              className="section bg-cover bg-center h-full w-screen"
-              style={{ backgroundImage: `url(${Xander1})` }}
-            >
-              <div className="flex backdrop-blur-sm w-screen h-screen items-center">
-                <Carousel images={Xander} />
+            
+            <div className="section h-screen w-screen bg-cover bg-center">
+              <div className="flex justify-center items-center">
+                <SecondCarousel
+                  images={Dikai}
+                  location={"JAKARTA"}
+                  judul={"Dikai Technology Indonesia Jakarta"}
+                />
               </div>
             </div>
+            
+            <div className="section h-screen w-screen bg-cover bg-center">
+              <div className="flex justify-center items-center">
+                <SecondCarousel
+                  images={VTOffice}
+                  location={"JAKARTA"}
+                  judul={"VT Office (PIK)"}
+                />
+              </div>
+            </div>
+            
+            
+        
+            
+
+
+            
+            
           </ReactFullpage.Wrapper>
         )}
       />

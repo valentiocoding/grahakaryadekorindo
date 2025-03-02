@@ -29,7 +29,7 @@ const Sidebar = () => {
 
   return (
     <>
-      <div className="fixed hidden lg:flex font-raleway font-semibold bottom-32 flex justify-between left-0 h-auto w-screen text-black z-[999] p-4">
+      <div className="fixed hidden lg:flex font-raleway font-semibold bottom-12 flex justify-between left-0 h-auto w-screen text-black z-[999] p-4">
         <HashLink to="/#project" className="flex space-x-2 items-center ml-10">
           <FontAwesomeIcon icon={faChevronLeft} />
           <p>Go Back</p>
@@ -47,7 +47,7 @@ const Sidebar = () => {
       </div>
       {/* Mobile View */}
 
-      <div className="lg:hidden fixed bottom-32 z-[999] text-sm flex justify-between left-0 h-auto w-screen  text-black  font-raleway font-semibold p-4">
+      <div className="lg:hidden fixed bottom-12 z-[999] text-sm flex justify-between left-0 h-auto w-screen  text-black  font-raleway font-semibold p-4">
         <HashLink to="/#project" className="flex space-x-2 items-center ml-10">
           <FontAwesomeIcon icon={faChevronLeft} />
           <p>Go Back</p>

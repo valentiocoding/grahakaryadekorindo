@@ -3,14 +3,32 @@ import React from "react";
 
 import ReactFullpage from "@fullpage/react-fullpage";
 import Sidebar from "../components/Sidebar";
-import Carousel from "./Carousel";
+import SecondCarousel from "./SecondCarousel";
 
-import fhouse1 from "../assets/residential/FHouse-6/1.webp";
-import fhouse2 from "../assets/residential/FHouse-6/2.webp";
-import fhouse3 from "../assets/residential/FHouse-6/3.webp";
-import fhouse4 from "../assets/residential/FHouse-6/4.webp";
-import fhouse5 from "../assets/residential/FHouse-6/5.webp";
-import fhouse6 from "../assets/residential/FHouse-6/6.webp";
+import bedroom1 from "../assets/residential/Bedroom-8/1.webp";
+import bedroom2 from "../assets/residential/Bedroom-8/2.webp";
+import bedroom3 from "../assets/residential/Bedroom-8/3.webp";
+import bedroom4 from "../assets/residential/Bedroom-8/4.webp";
+import bedroom5 from "../assets/residential/Bedroom-8/5.webp";
+import bedroom6 from "../assets/residential/Bedroom-8/6.webp";
+import bedroom7 from "../assets/residential/Bedroom-8/7.webp";
+import bedroom8 from "../assets/residential/Bedroom-8/8.webp";
+
+import fhouse1 from "../assets/residential/FHouse-15/1.webp";
+import fhouse2 from "../assets/residential/FHouse-15/2.webp";
+import fhouse3 from "../assets/residential/FHouse-15/3.webp";
+import fhouse4 from "../assets/residential/FHouse-15/4.webp";
+import fhouse5 from "../assets/residential/FHouse-15/5.webp";
+import fhouse6 from "../assets/residential/FHouse-15/6.webp";
+import fhouse7 from "../assets/residential/FHouse-15/7.webp";
+import fhouse8 from "../assets/residential/FHouse-15/8.webp";
+import fhouse9 from "../assets/residential/FHouse-15/9.webp";
+import fhouse10 from "../assets/residential/FHouse-15/10.webp";
+import fhouse11 from "../assets/residential/FHouse-15/11.webp";
+import fhouse12 from "../assets/residential/FHouse-15/12.webp";
+import fhouse13 from "../assets/residential/FHouse-15/13.webp";
+import fhouse14 from "../assets/residential/FHouse-15/14.webp";
+import fhouse15 from "../assets/residential/FHouse-15/15.webp";
 
 import gplex1 from "../assets/residential/GPlex-6/1.webp";
 import gplex2 from "../assets/residential/GPlex-6/2.webp";
@@ -49,9 +67,13 @@ import whhouse5 from "../assets/residential/WhHouse-7/5.webp";
 import whhouse6 from "../assets/residential/WhHouse-7/6.webp";
 import whhouse7 from "../assets/residential/WhHouse-7/7.webp";
 
-const fhouse = [fhouse1, fhouse2, fhouse3, fhouse4, fhouse5, fhouse6];
+const bedroom = [bedroom1, bedroom2, bedroom3, bedroom4, bedroom5, bedroom6, bedroom7, bedroom8];
+
+const fhouse = [fhouse1, fhouse2, fhouse3, fhouse4, fhouse5, fhouse6, fhouse7, fhouse8, fhouse9, fhouse10, fhouse11, fhouse12, fhouse13, fhouse14, fhouse15];
+
 
 const gplex = [gplex1, gplex2, gplex3, gplex4, gplex5, gplex6];
+
 
 const kitchen = [
   kitchen1,
@@ -91,11 +113,12 @@ const whhouse = [
 
 const Residential = () => {
   const fullpageOptions = {
-    scrollingSpeed: 1000,
+    scrollingSpeed: 800,
     licenseKey: "gplv3-license",
     easingcss3: "ease-in-out",
     credits: { enabled: false },
-    navigation: true, // Enable navigation dots if needed
+    responsiveWidth: 768
+    // navigation: true, // Enable navigation dots if needed
   };
 
   return (
@@ -105,50 +128,58 @@ const Residential = () => {
         {...fullpageOptions}
         render={() => (
           <ReactFullpage.Wrapper>
-            {/* Fhouse */}
-            <div
-              className="section  bg-cover bg-center h-full w-screen"
-              style={{ backgroundImage: `url(${fhouse1})` }}
-            >
-              <div className="flex backdrop-blur-sm w-screen h-screen items-center">
-                <Carousel images={fhouse} />
+           <div className="section h-screen w-screen bg-cover bg-center">
+              <div className="flex justify-center items-center">
+                <SecondCarousel
+                  images={bedroom}
+                  location={"BEDROOM"}
+                  judul={"GRAHA KARYA DEKORINDO"}
+                />
               </div>
             </div>
-            {/* kitchen */}
-            <div
-              className="section bg-cover bg-center h-full w-screen"
-              style={{ backgroundImage: `url(${kitchen1})` }}
-            >
-              <div className="flex backdrop-blur-sm w-screen h-screen items-center">
-                <Carousel images={kitchen} />
+           <div className="section h-screen w-screen bg-cover bg-center">
+              <div className="flex justify-center items-center">
+                <SecondCarousel
+                  images={fhouse}
+                  location={"FH HOUSE"}
+                  judul={"GRAHA KARYA DEKORINDO"}
+                />
               </div>
             </div>
-            {/* wardrobe */}
-            <div
-              className="section bg-cover bg-center h-full w-screen"
-              style={{ backgroundImage: `url(${wardrobe1})` }}
-            >
-              <div className="flex backdrop-blur-sm w-screen h-screen items-center">
-                <Carousel images={wardrobe} />
+           <div className="section h-screen w-screen bg-cover bg-center">
+              <div className="flex justify-center items-center">
+                <SecondCarousel
+                  images={gplex}
+                  location={"GPLEX"}
+                  judul={"GRAHA KARYA DEKORINDO"}
+                />
               </div>
             </div>
-            {/* whhouse */}
-            <div
-              className="section bg-cover bg-center h-full w-screen"
-              style={{ backgroundImage: `url(${whhouse1})` }}
-            >
-              <div className="flex backdrop-blur-sm w-screen h-screen items-center">
-                <Carousel images={whhouse} />
+           <div className="section h-screen w-screen bg-cover bg-center">
+              <div className="flex justify-center items-center">
+                <SecondCarousel
+                  images={kitchen}
+                  location={"KITCHEN"}
+                  judul={"GRAHA KARYA DEKORINDO"}
+                />
               </div>
             </div>
-
-            {/* gplex */}
-            <div
-              className="section bg-cover bg-center h-full w-screen"
-              style={{ backgroundImage: `url(${gplex1})` }}
-            >
-              <div className="flex backdrop-blur-sm w-screen h-screen items-center">
-                <Carousel images={gplex} />
+           <div className="section h-screen w-screen bg-cover bg-center">
+              <div className="flex justify-center items-center">
+                <SecondCarousel
+                  images={wardrobe}
+                  location={"WARDROBE"}
+                  judul={"GRAHA KARYA DEKORINDO"}
+                />
+              </div>
+            </div>
+           <div className="section h-screen w-screen bg-cover bg-center">
+              <div className="flex justify-center items-center">
+                <SecondCarousel
+                  images={whhouse}
+                  location={"WH HOUSE"}
+                  judul={"GRAHA KARYA DEKORINDO"}
+                />
               </div>
             </div>
           </ReactFullpage.Wrapper>

@@ -3,98 +3,89 @@ import React from "react";
 
 import ReactFullpage from "@fullpage/react-fullpage";
 import Sidebar from "../components/Sidebar";
-import Carousel from "./Carousel";
-import FurnitureA1 from "../assets/furniture/Furniture1-8/1.webp";
-import FurnitureA2 from "../assets/furniture/Furniture1-8/2.webp";
-import FurnitureA3 from "../assets/furniture/Furniture1-8/3.webp";
-import FurnitureA4 from "../assets/furniture/Furniture1-8/4.webp";
-import FurnitureA5 from "../assets/furniture/Furniture1-8/5.webp";
-import FurnitureA6 from "../assets/furniture/Furniture1-8/6.webp";
-import FurnitureA7 from "../assets/furniture/Furniture1-8/7.webp";
-import FurnitureA8 from "../assets/furniture/Furniture1-8/8.webp";
+import SecondCarousel from "./SecondCarousel";
+import Furniture1 from "../assets/furniture/Furniture-34/1.webp";
+import Furniture2 from "../assets/furniture/Furniture-34/2.webp";
+import Furniture3 from "../assets/furniture/Furniture-34/3.webp";
+import Furniture4 from "../assets/furniture/Furniture-34/4.webp";
+import Furniture5 from "../assets/furniture/Furniture-34/5.webp";
+import Furniture6 from "../assets/furniture/Furniture-34/6.webp";
+import Furniture7 from "../assets/furniture/Furniture-34/7.webp";
+import Furniture8 from "../assets/furniture/Furniture-34/8.webp";
+import Furniture9 from "../assets/furniture/Furniture-34/9.webp";
+import Furniture10 from "../assets/furniture/Furniture-34/10.webp";
+import Furniture11 from "../assets/furniture/Furniture-34/11.webp";
+import Furniture12 from "../assets/furniture/Furniture-34/12.webp";
+import Furniture13 from "../assets/furniture/Furniture-34/13.webp";
+import Furniture14 from "../assets/furniture/Furniture-34/14.webp";
+import Furniture15 from "../assets/furniture/Furniture-34/15.webp";
+import Furniture16 from "../assets/furniture/Furniture-34/16.webp";
+import Furniture17 from "../assets/furniture/Furniture-34/17.webp";
+import Furniture18 from "../assets/furniture/Furniture-34/18.webp";
+import Furniture19 from "../assets/furniture/Furniture-34/19.webp";
+import Furniture20 from "../assets/furniture/Furniture-34/20.webp";
+import Furniture21 from "../assets/furniture/Furniture-34/21.webp";
+import Furniture22 from "../assets/furniture/Furniture-34/22.webp";
+import Furniture23 from "../assets/furniture/Furniture-34/23.webp";
+import Furniture24 from "../assets/furniture/Furniture-34/24.webp";
+import Furniture25 from "../assets/furniture/Furniture-34/25.webp";
+import Furniture26 from "../assets/furniture/Furniture-34/26.webp";
+import Furniture27 from "../assets/furniture/Furniture-34/27.webp";
+import Furniture28 from "../assets/furniture/Furniture-34/28.webp";
+import Furniture29 from "../assets/furniture/Furniture-34/29.webp";
+import Furniture30 from "../assets/furniture/Furniture-34/30.webp";
+import Furniture31 from "../assets/furniture/Furniture-34/31.webp";
+import Furniture32 from "../assets/furniture/Furniture-34/32.webp";
+import Furniture33 from "../assets/furniture/Furniture-34/33.webp";
+import Furniture34 from "../assets/furniture/Furniture-34/34.webp";
 
-
-import FurnitureB1 from "../assets/furniture/Furniture2-8/1.webp";
-import FurnitureB2 from "../assets/furniture/Furniture2-8/2.webp";
-import FurnitureB3 from "../assets/furniture/Furniture2-8/3.webp";
-import FurnitureB4 from "../assets/furniture/Furniture2-8/4.webp";
-import FurnitureB5 from "../assets/furniture/Furniture2-8/5.webp";
-import FurnitureB6 from "../assets/furniture/Furniture2-8/6.webp";
-import FurnitureB7 from "../assets/furniture/Furniture2-8/7.webp";
-import FurnitureB8 from "../assets/furniture/Furniture2-8/8.webp";
-
-
-import FurnitureC1 from "../assets/furniture/Furniture3-8/1.webp";
-import FurnitureC2 from "../assets/furniture/Furniture3-8/2.webp";
-import FurnitureC3 from "../assets/furniture/Furniture3-8/3.webp";
-import FurnitureC4 from "../assets/furniture/Furniture3-8/4.webp";
-import FurnitureC5 from "../assets/furniture/Furniture3-8/5.webp";
-import FurnitureC6 from "../assets/furniture/Furniture3-8/6.webp";
-import FurnitureC7 from "../assets/furniture/Furniture3-8/7.webp";
-import FurnitureC8 from "../assets/furniture/Furniture3-8/8.webp";
-
-import FurnitureD1 from "../assets/furniture/Furniture4-9/1.webp";
-import FurnitureD2 from "../assets/furniture/Furniture4-9/2.webp";
-import FurnitureD3 from "../assets/furniture/Furniture4-9/3.webp";
-import FurnitureD4 from "../assets/furniture/Furniture4-9/4.webp";
-import FurnitureD5 from "../assets/furniture/Furniture4-9/5.webp";
-import FurnitureD6 from "../assets/furniture/Furniture4-9/6.webp";
-import FurnitureD7 from "../assets/furniture/Furniture4-9/7.webp";
-import FurnitureD8 from "../assets/furniture/Furniture4-9/8.webp";
-import FurnitureD9 from "../assets/furniture/Furniture4-9/9.webp";
-
-const FurnitureA = [
-  FurnitureA1,
-  FurnitureA2,
-  FurnitureA3,
-  FurnitureA4,
-  FurnitureA5,
-  FurnitureA6,
-  FurnitureA7,
-  FurnitureA8,
+const furnitures = [
+  Furniture1,
+  Furniture2,
+  Furniture3,
+  Furniture4,
+  Furniture5,
+  Furniture6,
+  Furniture7,
+  Furniture8,
+  Furniture9,
+  Furniture10,
+  Furniture11,
+  Furniture12,
+  Furniture13,
+  Furniture14,
+  Furniture15,
+  Furniture16,
+  Furniture17,
+  Furniture18,
+  Furniture19,
+  Furniture20,
+  Furniture21,
+  Furniture22,
+  Furniture23,
+  Furniture24,
+  Furniture25,
+  Furniture26,
+  Furniture27,
+  Furniture28,
+  Furniture29,
+  Furniture30,
+  Furniture31,
+  Furniture32,
+  Furniture33,
+  Furniture34,
 ];
 
-const FurnitureB = [
-  FurnitureB1,
-  FurnitureB2,
-  FurnitureB3,
-  FurnitureB4,
-  FurnitureB5,
-  FurnitureB6,
-  FurnitureB7,
-  FurnitureB8,
-];
 
-const FurnitureC = [
-  FurnitureC1,
-  FurnitureC2,
-  FurnitureC3,
-  FurnitureC4,
-  FurnitureC5,
-  FurnitureC6,
-  FurnitureC7,
-  FurnitureC8, 
-];
-
-const FurnitureD = [
-  FurnitureD1,
-  FurnitureD2,
-  FurnitureD3,
-  FurnitureD4,
-  FurnitureD5,
-  FurnitureD6,
-  FurnitureD7,
-  FurnitureD8,
-  FurnitureD9,
-];
 
 const Furniture = () => {
   const fullpageOptions = {
-    scrollingSpeed: 1000,
+    scrollingSpeed: 800,
     licenseKey: "gplv3-license",
     easingcss3: "ease-in-out",
     credits: { enabled: false },
-    navigation: true, // Enable navigation dots if needed
+    responsiveWidth: 768
+    // navigation: true, // Enable navigation dots if needed
   };
 
   return (
@@ -104,26 +95,16 @@ const Furniture = () => {
         {...fullpageOptions}
         render={() => (
           <ReactFullpage.Wrapper>
-            <div className="section bg-cover bg-center h-full w-screen" style={{ backgroundImage: `url(${FurnitureA1})` }}>
-              <div className="flex backdrop-blur-md w-screen h-screen items-center">
-                <Carousel images={FurnitureA}/>
+            <div className="section h-screen w-screen bg-cover bg-center">
+              <div className="flex justify-center items-center">
+                <SecondCarousel
+                  images={furnitures}
+                  location={"GKD"}
+                  judul={"Furnitures"}
+                />
               </div>
             </div>
-            <div className="section bg-cover bg-center h-full w-screen" style={{ backgroundImage: `url(${FurnitureB1})` }}>
-              <div className="flex backdrop-blur-md w-screen h-screen items-center">
-                <Carousel images={FurnitureB}/>
-              </div>
-            </div>
-            <div className="section bg-cover bg-center h-full w-screen" style={{ backgroundImage: `url(${FurnitureC1})` }}>
-              <div className="flex backdrop-blur-md w-screen h-screen items-center">
-                <Carousel images={FurnitureC}/>
-              </div>
-            </div>
-            <div className="section bg-cover bg-center h-full w-screen" style={{ backgroundImage: `url(${FurnitureD1})` }}>
-              <div className="flex backdrop-blur-md w-screen h-screen items-center">
-                <Carousel images={FurnitureD}/>
-              </div>
-            </div>
+            
 
           </ReactFullpage.Wrapper>
         )}
