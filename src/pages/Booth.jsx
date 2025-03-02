@@ -62,7 +62,7 @@ const Booth = () => {
   };
 
   return (
-    <div className="wrapper hidden md:flex  items-center justify-center">
+    <div className="wrapper   items-center justify-center">
       <Sidebar />
       <ReactFullpage
         {...fullpageOptions}
@@ -117,8 +117,6 @@ const Booth = () => {
         )}
       />
     </div>
-
- 
   );
 };
 
