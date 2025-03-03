@@ -30,12 +30,7 @@ import fhouse13 from "../assets/residential/FHouse-15/13.webp";
 import fhouse14 from "../assets/residential/FHouse-15/14.webp";
 import fhouse15 from "../assets/residential/FHouse-15/15.webp";
 
-import gplex1 from "../assets/residential/GPlex-6/1.webp";
-import gplex2 from "../assets/residential/GPlex-6/2.webp";
-import gplex3 from "../assets/residential/GPlex-6/3.webp";
-import gplex4 from "../assets/residential/GPlex-6/4.webp";
-import gplex5 from "../assets/residential/GPlex-6/5.webp";
-import gplex6 from "../assets/residential/GPlex-6/6.webp";
+
 
 import kitchen1 from "../assets/residential/Kitchen-11/1.webp";
 import kitchen2 from "../assets/residential/Kitchen-11/2.webp";
@@ -72,7 +67,7 @@ const bedroom = [bedroom1, bedroom2, bedroom3, bedroom4, bedroom5, bedroom6, bed
 const fhouse = [fhouse1, fhouse2, fhouse3, fhouse4, fhouse5, fhouse6, fhouse7, fhouse8, fhouse9, fhouse10, fhouse11, fhouse12, fhouse13, fhouse14, fhouse15];
 
 
-const gplex = [gplex1, gplex2, gplex3, gplex4, gplex5, gplex6];
+
 
 
 const kitchen = [
@@ -146,15 +141,7 @@ const Residential = () => {
                 />
               </div>
             </div>
-           <div className="section h-screen w-screen bg-cover bg-center">
-              <div className="flex justify-center items-center">
-                <SecondCarousel
-                  images={gplex}
-                  location={"GPLEX"}
-                  judul={"GRAHA KARYA DEKORINDO"}
-                />
-              </div>
-            </div>
+           
            <div className="section h-screen w-screen bg-cover bg-center">
               <div className="flex justify-center items-center">
                 <SecondCarousel

@@ -102,6 +102,15 @@ import Xander10 from "../assets//office/Xander-12/10.webp";
 import Xander11 from "../assets//office/Xander-12/11.webp";
 import Xander12 from "../assets//office/Xander-12/12.webp";
 
+import gplex1 from "../assets/office/GPlex-6/1.webp";
+import gplex2 from "../assets/office/GPlex-6/2.webp";
+import gplex3 from "../assets/office/GPlex-6/3.webp";
+import gplex4 from "../assets/office/GPlex-6/4.webp";
+import gplex5 from "../assets/office/GPlex-6/5.webp";
+import gplex6 from "../assets/office/GPlex-6/6.webp";
+
+const gplex = [gplex1, gplex2, gplex3, gplex4, gplex5, gplex6];
+
 const BinusA = [
   BinusA1,
   BinusA2,
@@ -216,6 +225,16 @@ const Office = () => {
               </div>
             </div>
 
+            <div className="section h-screen w-screen bg-cover bg-center">
+              <div className="flex justify-center items-center">
+                <SecondCarousel
+                  images={gplex}
+                  location={"GPLEX"}
+                  judul={"GRAHA KARYA DEKORINDO"}
+                />
+              </div>
+            </div>
+            
             <div className="section h-screen w-screen bg-cover bg-center">
               <div className="flex justify-center items-center">
                 <SecondCarousel
