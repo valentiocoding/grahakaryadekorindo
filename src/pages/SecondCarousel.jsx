@@ -29,18 +29,20 @@ const SecondCarousel = ({ images, location, judul }) => {
           modules={[Navigation, Pagination]}
           navigation
           pagination={{ clickable: true }}
-          loop={true}
-          spaceBetween={10}
+          // loop={true}
           slidesPerView={1}
           centeredSlides={true}
-          className="w-full max-w-[1200px]"
+          className="w-auto bg-white"
         >
           {images.map((src, index) => (
-            <SwiperSlide key={index} className="flex items-center justify-center object-center place-content-center">
+            <SwiperSlide
+              key={index}
+              className="flex items-center justify-center"
+            >
               <img
                 src={src}
                 alt={`Slide ${index + 1}`}
-                className="w-full h-auto max-h-[500px] aspect-video object-cover object-center shadow-lg"
+                className="w-full h-auto max-h-[500px] aspect-video object-contain object-center shadow-lg"
                 loading="lazy"
               />
             </SwiperSlide>
