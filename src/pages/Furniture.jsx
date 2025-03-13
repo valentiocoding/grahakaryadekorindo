@@ -3,7 +3,7 @@ import React from "react";
 
 import ReactFullpage from "@fullpage/react-fullpage";
 import Sidebar from "../components/Sidebar";
-import SecondCarousel from "./SecondCarousel";
+import ContainCarousel from "./ContainCarousel";
 import Furniture1 from "../assets/furniture/Furniture-34/1.webp";
 import Furniture2 from "../assets/furniture/Furniture-34/2.webp";
 import Furniture3 from "../assets/furniture/Furniture-34/3.webp";
@@ -97,7 +97,7 @@ const Furniture = () => {
           <ReactFullpage.Wrapper>
             <div className="section h-screen w-screen bg-cover bg-center">
               <div className="flex justify-center items-center">
-                <SecondCarousel
+                <ContainCarousel
                   images={furnitures}
                   location={"GKD"}
                   judul={"Furnitures"}

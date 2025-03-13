@@ -29,7 +29,7 @@ import Oregon1 from "../assets/booth/Oregon-3/1.webp";
 import Oregon2 from "../assets/booth/Oregon-3/2.webp";
 import Oregon3 from "../assets/booth/Oregon-3/3.webp";
 
-import Yasuka1 from "../assets/booth/Yasuka-1/1.webp";
+import Yasuka1 from "../assets/booth/Yasuka-1/crop/1.webp";
 
 const Buzz = [
   Buzz1, Buzz2,Buzz1, Buzz2
@@ -48,7 +48,7 @@ const Oregon = [
 ]
 
 const Yasuka = [
-  Yasuka1, Yasuka1, Yasuka1, Yasuka1
+  Yasuka1
 ]
 
 const Booth = () => {

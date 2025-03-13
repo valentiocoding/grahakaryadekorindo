@@ -42,7 +42,7 @@ const SecondCarousel = ({ images, location, judul }) => {
               <img
                 src={src}
                 alt={`Slide ${index + 1}`}
-                className="w-full h-auto max-h-[500px] aspect-video object-contain object-center shadow-lg"
+                className="w-full h-auto max-h-[full] aspect-video object-cover object-center shadow-lg"
                 loading="lazy"
               />
             </SwiperSlide>

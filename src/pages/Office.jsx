@@ -3,27 +3,23 @@ import React from "react";
 
 import ReactFullpage from "@fullpage/react-fullpage";
 import Sidebar from "../components/Sidebar";
-import Carousel from "./Carousel";
 import SecondCarousel from "./SecondCarousel";
 
-import BinusA1 from "../assets/office/BinusA-18/1.webp";
-import BinusA2 from "../assets/office/BinusA-18/2.webp";
-import BinusA3 from "../assets/office/BinusA-18/3.webp";
-import BinusA4 from "../assets/office/BinusA-18/4.webp";
-import BinusA5 from "../assets/office/BinusA-18/5.webp";
-import BinusA6 from "../assets/office/BinusA-18/6.webp";
-import BinusA7 from "../assets/office/BinusA-18/7.webp";
-import BinusA8 from "../assets/office/BinusA-18/8.webp";
-import BinusA9 from "../assets/office/BinusA-18/9.webp";
-import BinusA10 from "../assets/office/BinusA-18/10.webp";
-import BinusA11 from "../assets/office/BinusA-18/11.webp";
-import BinusA12 from "../assets/office/BinusA-18/12.webp";
-import BinusA13 from "../assets/office/BinusA-18/13.webp";
-import BinusA14 from "../assets/office/BinusA-18/14.webp";
-import BinusA15 from "../assets/office/BinusA-18/15.webp";
-import BinusA16 from "../assets/office/BinusA-18/16.webp";
-import BinusA17 from "../assets/office/BinusA-18/17.webp";
-import BinusA18 from "../assets/office/BinusA-18/18.webp";
+import BinusA1 from "../assets/office/BinusA-18/crop/1.webp";
+import BinusA2 from "../assets/office/BinusA-18/crop/2.webp";
+import BinusA3 from "../assets/office/BinusA-18/crop/3.webp";
+import BinusA4 from "../assets/office/BinusA-18/crop/4.webp";
+import BinusA5 from "../assets/office/BinusA-18/crop/5.webp";
+import BinusA7 from "../assets/office/BinusA-18/crop/7.webp";
+import BinusA8 from "../assets/office/BinusA-18/crop/8.webp";
+import BinusA9 from "../assets/office/BinusA-18/crop/9.webp";
+import BinusA10 from "../assets/office/BinusA-18/crop/10.webp";
+import BinusA11 from "../assets/office/BinusA-18/crop/11.webp";
+import BinusA12 from "../assets/office/BinusA-18/crop/12.webp";
+import BinusA15 from "../assets/office/BinusA-18/crop/15.webp";
+import BinusA16 from "../assets/office/BinusA-18/crop/16.webp";
+import BinusA17 from "../assets/office/BinusA-18/crop/17.webp";
+import BinusA18 from "../assets/office/BinusA-18/crop/18.webp";
 
 import BinusB1 from "../assets//office/BinusB-1/1.webp";
 
@@ -117,15 +113,12 @@ const BinusA = [
   BinusA3,
   BinusA4,
   BinusA5,
-  BinusA6,
   BinusA7,
   BinusA8,
   BinusA9,
   BinusA10,
   BinusA11,
   BinusA12,
-  BinusA13,
-  BinusA14,
   BinusA15,
   BinusA16,
   BinusA17,
@@ -194,7 +187,7 @@ const Office = () => {
     licenseKey: "gplv3-license",
     easingcss3: "ease-in-out",
     credits: { enabled: false },
-    responsiveWidth: 768
+    responsiveWidth: 768,
     // navigation: true, // Enable navigation dots if needed
   };
 
@@ -214,7 +207,7 @@ const Office = () => {
                 />
               </div>
             </div>
-            
+
             <div className="section h-screen w-screen bg-cover bg-center">
               <div className="flex justify-center items-center">
                 <SecondCarousel
@@ -234,7 +227,7 @@ const Office = () => {
                 />
               </div>
             </div>
-            
+
             <div className="section h-screen w-screen bg-cover bg-center">
               <div className="flex justify-center items-center">
                 <SecondCarousel
@@ -263,7 +256,6 @@ const Office = () => {
                 />
               </div>
             </div>
-            
 
             <div className="section h-screen w-screen bg-cover bg-center">
               <div className="flex justify-center items-center">
@@ -274,7 +266,6 @@ const Office = () => {
                 />
               </div>
             </div>
-            
 
             <div className="section h-screen w-screen bg-cover bg-center">
               <div className="flex justify-center items-center">
@@ -295,7 +286,7 @@ const Office = () => {
                 />
               </div>
             </div>
-            
+
             <div className="section h-screen w-screen bg-cover bg-center">
               <div className="flex justify-center items-center">
                 <SecondCarousel
@@ -305,7 +296,7 @@ const Office = () => {
                 />
               </div>
             </div>
-            
+
             <div className="section h-screen w-screen bg-cover bg-center">
               <div className="flex justify-center items-center">
                 <SecondCarousel
@@ -315,7 +306,7 @@ const Office = () => {
                 />
               </div>
             </div>
-            
+
             <div className="section h-screen w-screen bg-cover bg-center">
               <div className="flex justify-center items-center">
                 <SecondCarousel
@@ -325,7 +316,7 @@ const Office = () => {
                 />
               </div>
             </div>
-            
+
             <div className="section h-screen w-screen bg-cover bg-center">
               <div className="flex justify-center items-center">
                 <SecondCarousel
@@ -335,7 +326,7 @@ const Office = () => {
                 />
               </div>
             </div>
-            
+
             <div className="section h-screen w-screen bg-cover bg-center">
               <div className="flex justify-center items-center">
                 <SecondCarousel
@@ -345,14 +336,6 @@ const Office = () => {
                 />
               </div>
             </div>
-            
-            
-        
-            
-
-
-            
-            
           </ReactFullpage.Wrapper>
         )}
       />
