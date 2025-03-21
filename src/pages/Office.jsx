@@ -336,6 +336,16 @@ const Office = () => {
                 />
               </div>
             </div>
+
+            <div className="section h-screen w-screen bg-cover bg-center">
+              <div className="flex justify-center items-center">
+                <SecondCarousel
+                  images={Xander}
+                  location={"JAKARTA"}
+                  judul={"Xander Creative Agency"}
+                />
+              </div>
+            </div>
           </ReactFullpage.Wrapper>
         )}
       />
